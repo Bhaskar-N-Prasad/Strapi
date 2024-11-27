@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_features",
+  "info": {
+    "displayName": "features",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "order": {
+      "type": "integer",
+      "max": 100,
+      "min": 1
+    },
+    "featureList": {
+      "displayName": "featureList",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.feature-list"
+    }
+  }
+}

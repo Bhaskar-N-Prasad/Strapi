@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_shared_themes",
+  "info": {
+    "displayName": "theme",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "themeColor": {
+      "type": "string"
+    },
+    "buttonColor": {
+      "type": "string"
+    },
+    "linkColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "widgetColor": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_feature_lists",
+  "info": {
+    "displayName": "featureList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "featureImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "link": {
+      "displayName": "link",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    }
+  }
+}

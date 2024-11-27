@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_benefits",
+  "info": {
+    "displayName": "benefits"
+  },
+  "options": {},
+  "attributes": {
+    "order": {
+      "max": 100,
+      "min": 1,
+      "type": "integer"
+    },
+    "sectionDirection": {
+      "type": "enumeration",
+      "enum": [
+        "row",
+        "column"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "sections": {
+      "displayName": "benefitSections",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.benefit-sections"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_benefit_sections",
+  "info": {
+    "displayName": "benefitSections",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_links",
+  "info": {
+    "displayName": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "linkText": {
+      "type": "string"
+    },
+    "redirectionUrl": {
+      "type": "string"
+    },
+    "insightsSection": {
+      "type": "string"
+    }
+  }
+}
