@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_colors",
+  "info": {
+    "displayName": "colors",
+    "icon": "brush",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "color": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shared_line_graphs",
+  "info": {
+    "displayName": "lineGraph",
+    "icon": "",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "areaGraph": {
+      "displayName": "areaGraph",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.area-graph"
+    },
+    "lineStyle": {
+      "displayName": "lineStyle",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.line-style"
+    },
+    "itemStyle": {
+      "displayName": "itemStyle",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.item-style"
+    },
+    "lableStyle": {
+      "displayName": "lableStyle",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.lable-style"
+    }
+  }
+}

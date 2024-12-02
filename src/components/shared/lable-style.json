@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_lable_styles",
+  "info": {
+    "displayName": "lableStyle"
+  },
+  "options": {},
+  "attributes": {
+    "colors": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.colors"
+    }
+  }
+}

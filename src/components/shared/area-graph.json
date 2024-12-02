@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_area_graphs",
+  "info": {
+    "displayName": "areaGraph"
+  },
+  "options": {},
+  "attributes": {
+    "colors": {
+      "displayName": "colors",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.colors"
+    }
+  }
+}

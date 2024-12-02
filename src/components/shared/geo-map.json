@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_geo_maps",
+  "info": {
+    "displayName": "geoMap"
+  },
+  "options": {},
+  "attributes": {
+    "colors": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.colors"
+    }
+  }
+}

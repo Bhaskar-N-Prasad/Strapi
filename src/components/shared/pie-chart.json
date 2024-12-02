@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_pie_charts",
+  "info": {
+    "displayName": "pieChart"
+  },
+  "options": {},
+  "attributes": {
+    "colors": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.colors"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_campaigns",
+  "info": {
+    "displayName": "campaign"
+  },
+  "options": {},
+  "attributes": {
+    "campaign_and_content": {
+      "type": "boolean"
+    }
+  }
+}

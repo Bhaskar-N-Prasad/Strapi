@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_stacked_graphs",
+  "info": {
+    "displayName": "stackedGraph"
+  },
+  "options": {},
+  "attributes": {
+    "colors": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.colors"
+    }
+  }
+}
