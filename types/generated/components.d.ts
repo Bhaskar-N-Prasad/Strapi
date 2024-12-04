@@ -1,5 +1,15 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedAreaGraph extends Struct.ComponentSchema {
+  collectionName: 'components_shared_area_graphs';
+  info: {
+    displayName: 'areaGraph';
+  };
+  attributes: {
+    colors: Schema.Attribute.Component<'shared.colors', true>;
+  };
+}
+
 export interface SharedBenefitSections extends Struct.ComponentSchema {
   collectionName: 'components_shared_benefit_sections';
   info: {
@@ -31,6 +41,28 @@ export interface SharedBenefits extends Struct.ComponentSchema {
     sectionDirection: Schema.Attribute.Enumeration<['row', 'column']>;
     sections: Schema.Attribute.Component<'shared.benefit-sections', true>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCampaign extends Struct.ComponentSchema {
+  collectionName: 'components_shared_campaigns';
+  info: {
+    displayName: 'campaign';
+  };
+  attributes: {
+    campaign_and_content: Schema.Attribute.Boolean;
+  };
+}
+
+export interface SharedColors extends Struct.ComponentSchema {
+  collectionName: 'components_shared_colors';
+  info: {
+    description: '';
+    displayName: 'colors';
+    icon: 'brush';
+  };
+  attributes: {
+    color: Schema.Attribute.String;
   };
 }
 
@@ -80,6 +112,61 @@ export interface SharedFooter extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedGeoMap extends Struct.ComponentSchema {
+  collectionName: 'components_shared_geo_maps';
+  info: {
+    displayName: 'geoMap';
+  };
+  attributes: {
+    colors: Schema.Attribute.Component<'shared.colors', true>;
+  };
+}
+
+export interface SharedItemStyle extends Struct.ComponentSchema {
+  collectionName: 'components_shared_item_styles';
+  info: {
+    displayName: 'itemStyle';
+  };
+  attributes: {
+    colors: Schema.Attribute.Component<'shared.colors', true>;
+  };
+}
+
+export interface SharedLableStyle extends Struct.ComponentSchema {
+  collectionName: 'components_shared_lable_styles';
+  info: {
+    displayName: 'lableStyle';
+  };
+  attributes: {
+    colors: Schema.Attribute.Component<'shared.colors', true>;
+  };
+}
+
+export interface SharedLineGraph extends Struct.ComponentSchema {
+  collectionName: 'components_shared_line_graphs';
+  info: {
+    description: '';
+    displayName: 'lineGraph';
+    icon: '';
+  };
+  attributes: {
+    areaGraph: Schema.Attribute.Component<'shared.area-graph', false>;
+    itemStyle: Schema.Attribute.Component<'shared.item-style', false>;
+    lableStyle: Schema.Attribute.Component<'shared.lable-style', false>;
+    lineStyle: Schema.Attribute.Component<'shared.line-style', false>;
+  };
+}
+
+export interface SharedLineStyle extends Struct.ComponentSchema {
+  collectionName: 'components_shared_line_styles';
+  info: {
+    displayName: 'lineStyle';
+  };
+  attributes: {
+    colors: Schema.Attribute.Component<'shared.colors', true>;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -110,6 +197,16 @@ export interface SharedOrder extends Struct.ComponentSchema {
     displayName: 'order';
   };
   attributes: {};
+}
+
+export interface SharedPieChart extends Struct.ComponentSchema {
+  collectionName: 'components_shared_pie_charts';
+  info: {
+    displayName: 'pieChart';
+  };
+  attributes: {
+    colors: Schema.Attribute.Component<'shared.colors', true>;
+  };
 }
 
 export interface SharedQuote extends Struct.ComponentSchema {
@@ -163,6 +260,26 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedStackedGraph extends Struct.ComponentSchema {
+  collectionName: 'components_shared_stacked_graphs';
+  info: {
+    displayName: 'stackedGraph';
+  };
+  attributes: {
+    colors: Schema.Attribute.Component<'shared.colors', true>;
+  };
+}
+
+export interface SharedTest extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tests';
+  info: {
+    displayName: 'test';
+  };
+  attributes: {
+    test: Schema.Attribute.String;
+  };
+}
+
 export interface SharedTheme extends Struct.ComponentSchema {
   collectionName: 'components_shared_themes';
   info: {
@@ -183,18 +300,29 @@ export interface SharedTheme extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.area-graph': SharedAreaGraph;
       'shared.benefit-sections': SharedBenefitSections;
       'shared.benefits': SharedBenefits;
+      'shared.campaign': SharedCampaign;
+      'shared.colors': SharedColors;
       'shared.feature-list': SharedFeatureList;
       'shared.features': SharedFeatures;
       'shared.footer': SharedFooter;
+      'shared.geo-map': SharedGeoMap;
+      'shared.item-style': SharedItemStyle;
+      'shared.lable-style': SharedLableStyle;
+      'shared.line-graph': SharedLineGraph;
+      'shared.line-style': SharedLineStyle;
       'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.order': SharedOrder;
+      'shared.pie-chart': SharedPieChart;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.stacked-graph': SharedStackedGraph;
+      'shared.test': SharedTest;
       'shared.theme': SharedTheme;
     }
   }
