@@ -369,40 +369,6 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
-  collectionName: 'app_themes';
-  info: {
-    description: '';
-    displayName: 'AppTheme';
-    pluralName: 'app-themes';
-    singularName: 'app-theme';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    appTheme: Schema.Attribute.String &
-      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    geoMap: Schema.Attribute.Component<'shared.geo-map', false>;
-    lineGraph: Schema.Attribute.Component<'shared.line-graph', false>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::app-theme.app-theme'
-    > &
-      Schema.Attribute.Private;
-    pieChart: Schema.Attribute.Component<'shared.pie-chart', false>;
-    publishedAt: Schema.Attribute.DateTime;
-    stackedGraph: Schema.Attribute.Component<'shared.stacked-graph', false>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiLoginLogin extends Struct.CollectionTypeSchema {
   collectionName: 'logins';
   info: {
@@ -953,7 +919,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::app-theme.app-theme': ApiAppThemeAppTheme;
       'api::login.login': ApiLoginLogin;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
