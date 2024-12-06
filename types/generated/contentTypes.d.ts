@@ -403,6 +403,35 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
+  collectionName: 'features';
+  info: {
+    description: '';
+    displayName: 'Feature';
+    pluralName: 'features';
+    singularName: 'feature';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    feature: Schema.Attribute.Component<'features.feature', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::feature.feature'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLoginLogin extends Struct.CollectionTypeSchema {
   collectionName: 'logins';
   info: {
@@ -952,6 +981,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::app-theme.app-theme': ApiAppThemeAppTheme;
+      'api::feature.feature': ApiFeatureFeature;
       'api::login.login': ApiLoginLogin;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

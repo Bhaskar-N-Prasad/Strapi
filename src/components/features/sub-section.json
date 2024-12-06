@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_features_sub_sections",
+  "info": {
+    "displayName": "Sub-Section"
+  },
+  "options": {},
+  "attributes": {
+    "featureName": {
+      "type": "string"
+    },
+    "toggle": {
+      "type": "boolean"
+    }
+  }
+}
