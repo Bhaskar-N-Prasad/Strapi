@@ -381,8 +381,7 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    appTheme: Schema.Attribute.String &
-      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
+    appTheme: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

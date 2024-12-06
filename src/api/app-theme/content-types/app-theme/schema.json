@@ -12,11 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "appTheme": {
-      "type": "customField",
-      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
-      "customField": "plugin::color-picker.color"
-    },
     "lineGraph": {
       "displayName": "lineGraph",
       "type": "component",
@@ -40,6 +35,9 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.geo-map"
+    },
+    "appTheme": {
+      "type": "string"
     }
   }
 }
