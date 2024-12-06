@@ -99,7 +99,8 @@ export interface SharedColors extends Struct.ComponentSchema {
     icon: 'brush';
   };
   attributes: {
-    color: Schema.Attribute.String;
+    Colors: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
   };
 }
 

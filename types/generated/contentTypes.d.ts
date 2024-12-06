@@ -414,6 +414,8 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    Colors: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
