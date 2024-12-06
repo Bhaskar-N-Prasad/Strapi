@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_features_sections",
+  "info": {
+    "displayName": "Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "featureName": {
+      "type": "string"
+    },
+    "toggle": {
+      "type": "boolean"
+    },
+    "subSectioni": {
+      "type": "component",
+      "repeatable": true,
+      "component": "features.sub-section"
+    }
+  }
+}

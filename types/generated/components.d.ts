@@ -1,5 +1,42 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface FeaturesFeature extends Struct.ComponentSchema {
+  collectionName: 'components_features_features';
+  info: {
+    description: '';
+    displayName: 'Feature';
+  };
+  attributes: {
+    featureName: Schema.Attribute.String;
+    subFeatures: Schema.Attribute.Component<'features.section', true>;
+    toggle: Schema.Attribute.Boolean;
+  };
+}
+
+export interface FeaturesSection extends Struct.ComponentSchema {
+  collectionName: 'components_features_sections';
+  info: {
+    description: '';
+    displayName: 'Section';
+  };
+  attributes: {
+    featureName: Schema.Attribute.String;
+    subSectioni: Schema.Attribute.Component<'features.sub-section', true>;
+    toggle: Schema.Attribute.Boolean;
+  };
+}
+
+export interface FeaturesSubSection extends Struct.ComponentSchema {
+  collectionName: 'components_features_sub_sections';
+  info: {
+    displayName: 'Sub-Section';
+  };
+  attributes: {
+    featureName: Schema.Attribute.String;
+    toggle: Schema.Attribute.Boolean;
+  };
+}
+
 export interface SharedAreaGraph extends Struct.ComponentSchema {
   collectionName: 'components_shared_area_graphs';
   info: {
@@ -300,6 +337,9 @@ export interface SharedTheme extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'features.feature': FeaturesFeature;
+      'features.section': FeaturesSection;
+      'features.sub-section': FeaturesSubSection;
       'shared.area-graph': SharedAreaGraph;
       'shared.benefit-sections': SharedBenefitSections;
       'shared.benefits': SharedBenefits;
