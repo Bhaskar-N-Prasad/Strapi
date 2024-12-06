@@ -42,15 +42,17 @@ const Input = ({
   name,
   onChange,
   value,
+  label,
   intlLabel,
   required,
   attribute,
   description,
+  ...props
 }) => {
   const { formatMessage } = useIntl();
   const [color, setColor] = useState(value || "#000000");
   const [err, setError] = useState("");
-  // const colorRef = useRef<HTMLInputElement>(null);
+  
 
   const isValidColor = (color) => {
    
@@ -79,11 +81,9 @@ const Input = ({
 
   return (
     <div style={{ width: "100%" }}>
-      {/* <label htmlFor={name}>
-        {formatMessage(
-          intlLabel || { id: "color-plugin.input.label", defaultMessage: "Color" }
-        )}
-      </label> */}
+      <label htmlFor={name} style={{fontWeight: 600}}>
+        {label}
+      </label>
       <div
         style={{
           display: "flex",

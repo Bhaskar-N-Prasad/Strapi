@@ -325,13 +325,19 @@ export interface SharedTheme extends Struct.ComponentSchema {
     displayName: 'theme';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.String;
-    buttonColor: Schema.Attribute.String;
+    backgroundColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    buttonColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
     cover: Schema.Attribute.Media<'images'>;
-    linkColor: Schema.Attribute.String;
-    textColor: Schema.Attribute.String;
-    themeColor: Schema.Attribute.String;
-    widgetColor: Schema.Attribute.String;
+    linkColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    textColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    themeColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    widgetColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
   };
 }
 

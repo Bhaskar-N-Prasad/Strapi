@@ -6,21 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "themeColor": {
-      "type": "string"
-    },
-    "buttonColor": {
-      "type": "string"
-    },
-    "linkColor": {
-      "type": "string"
-    },
-    "textColor": {
-      "type": "string"
-    },
-    "backgroundColor": {
-      "type": "string"
-    },
     "cover": {
       "type": "media",
       "multiple": false,
@@ -29,8 +14,29 @@
         "images"
       ]
     },
+    "themeColor": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    },
     "widgetColor": {
-      "type": "string"
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "backgroundColor": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "linkColor": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "textColor": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "buttonColor": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
     }
   }
 }
