@@ -16,10 +16,6 @@
       "type": "component",
       "repeatable": true,
       "component": "features.feature"
-    },
-    "Colors": {
-      "type": "customField",
-      "customField": "plugin::color-picker.color-picker"
     }
   }
 }

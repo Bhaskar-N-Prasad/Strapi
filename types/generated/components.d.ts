@@ -7,6 +7,8 @@ export interface FeaturesFeature extends Struct.ComponentSchema {
     displayName: 'Feature';
   };
   attributes: {
+    Checkbox: Schema.Attribute.Boolean &
+      Schema.Attribute.CustomField<'plugin::checkbox.checkbox'>;
     featureName: Schema.Attribute.String;
     subFeatures: Schema.Attribute.Component<'features.section', true>;
     toggle: Schema.Attribute.Boolean;
