@@ -22,7 +22,7 @@ export default {
     app.customFields.register({
       name: 'checkbox',
       pluginId: PLUGIN_ID, // the custom field is created by a color-picker plugin
-      type: 'string', // the color will be stored as a string
+      type: 'boolean', // the color will be stored as a string
       intlLabel: {
         id: `${PLUGIN_ID}.checkbox.label`,
         defaultMessage: 'Checkbox',

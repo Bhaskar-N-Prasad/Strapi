@@ -381,7 +381,6 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    appTheme: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -396,6 +395,7 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
     pieChart: Schema.Attribute.Component<'shared.pie-chart', false>;
     publishedAt: Schema.Attribute.DateTime;
     stackedGraph: Schema.Attribute.Component<'shared.stacked-graph', false>;
+    tenentId: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -425,6 +425,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    tenentId: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -445,6 +446,7 @@ export interface ApiLoginLogin extends Struct.CollectionTypeSchema {
   attributes: {
     appLogo: Schema.Attribute.Media<'images'>;
     appName: Schema.Attribute.String;
+    appUrl: Schema.Attribute.String;
     appVideo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     benefit: Schema.Attribute.Component<'shared.benefits', false>;
     createdAt: Schema.Attribute.DateTime;

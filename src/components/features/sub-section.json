@@ -1,15 +1,18 @@
 {
   "collectionName": "components_features_sub_sections",
   "info": {
-    "displayName": "Sub-Section"
+    "displayName": "Sub-Section",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "featureName": {
-      "type": "string"
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$"
     },
-    "toggle": {
-      "type": "boolean"
+    "display": {
+      "type": "customField",
+      "customField": "plugin::checkbox.checkbox"
     }
   }
 }

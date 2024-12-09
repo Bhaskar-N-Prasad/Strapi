@@ -7,17 +7,20 @@
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$"
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "regex": "^((?!<[^>]+>).)*$"
     }
   }
 }

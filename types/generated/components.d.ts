@@ -7,11 +7,10 @@ export interface FeaturesFeature extends Struct.ComponentSchema {
     displayName: 'Feature';
   };
   attributes: {
-    Checkbox: Schema.Attribute.Boolean &
+    display: Schema.Attribute.Boolean &
       Schema.Attribute.CustomField<'plugin::checkbox.checkbox'>;
-    featureName: Schema.Attribute.String;
+    featureName: Schema.Attribute.String & Schema.Attribute.Required;
     subFeatures: Schema.Attribute.Component<'features.section', true>;
-    toggle: Schema.Attribute.Boolean;
   };
 }
 
@@ -22,20 +21,23 @@ export interface FeaturesSection extends Struct.ComponentSchema {
     displayName: 'Section';
   };
   attributes: {
+    display: Schema.Attribute.Boolean &
+      Schema.Attribute.CustomField<'plugin::checkbox.checkbox'>;
     featureName: Schema.Attribute.String;
-    subSectioni: Schema.Attribute.Component<'features.sub-section', true>;
-    toggle: Schema.Attribute.Boolean;
+    Subsections: Schema.Attribute.Component<'features.sub-section', true>;
   };
 }
 
 export interface FeaturesSubSection extends Struct.ComponentSchema {
   collectionName: 'components_features_sub_sections';
   info: {
+    description: '';
     displayName: 'Sub-Section';
   };
   attributes: {
+    display: Schema.Attribute.Boolean &
+      Schema.Attribute.CustomField<'plugin::checkbox.checkbox'>;
     featureName: Schema.Attribute.String;
-    toggle: Schema.Attribute.Boolean;
   };
 }
 
@@ -65,6 +67,7 @@ export interface SharedBenefitSections extends Struct.ComponentSchema {
 export interface SharedBenefits extends Struct.ComponentSchema {
   collectionName: 'components_shared_benefits';
   info: {
+    description: '';
     displayName: 'benefits';
   };
   attributes: {
@@ -143,6 +146,7 @@ export interface SharedFeatures extends Struct.ComponentSchema {
 export interface SharedFooter extends Struct.ComponentSchema {
   collectionName: 'components_shared_footers';
   info: {
+    description: '';
     displayName: 'footer';
   };
   attributes: {

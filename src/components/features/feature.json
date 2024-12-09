@@ -7,17 +7,16 @@
   "options": {},
   "attributes": {
     "featureName": {
-      "type": "string"
-    },
-    "toggle": {
-      "type": "boolean"
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$",
+      "required": true
     },
     "subFeatures": {
       "type": "component",
       "repeatable": true,
       "component": "features.section"
     },
-    "Checkbox": {
+    "display": {
       "type": "customField",
       "customField": "plugin::checkbox.checkbox"
     }

@@ -7,13 +7,16 @@
   "options": {},
   "attributes": {
     "linkText": {
-      "type": "string"
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$"
     },
     "redirectionUrl": {
-      "type": "string"
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$"
     },
     "insightsSection": {
-      "type": "string"
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$"
     }
   }
 }

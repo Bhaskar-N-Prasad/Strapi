@@ -16,13 +16,16 @@
       ]
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$"
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "regex": "^((?!<[^>]+>).)*$"
     },
     "subTitle": {
-      "type": "string"
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$"
     },
     "link": {
       "displayName": "link",

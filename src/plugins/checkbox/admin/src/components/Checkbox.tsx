@@ -4,7 +4,14 @@ import { useIntl } from "react-intl";
 const styles = {
   input: {
     accentColor: "#4945ff",
+    height: 38,
+    width: 38
   },
+  div:{
+    display: "flex",
+    alignItems: 'flex-start',
+    gap: 4
+  }
 
 };
 
@@ -23,8 +30,18 @@ const Checkbox = ({
   description,
   ...props
 }: CheckboxProps) => {
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>)=>{
+        const value = e.target.checked;
+        onChange({ target: { name, value, type: attribute.type } });
+    }
     
-    return <input style={styles.input} type="checkbox" value={value} onChange={onChange}   />
+    return <div style={{...styles.div, flexDirection: "column"}}>
+        <label htmlFor={name} style={{fontWeight: 600}}>
+          {label}
+        </label>
+        <input style={styles.input} type="checkbox" checked={value} onChange={handleChange}   />
+      </div>
 };
 
 export default Checkbox;

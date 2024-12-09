@@ -14,7 +14,8 @@
   "attributes": {
     "logoText": {
       "type": "string",
-      "default": "Richer Leads. Actionable Insights."
+      "default": "Richer Leads. Actionable Insights.",
+      "regex": "^((?!<[^>]+>).)*$"
     },
     "appVideo": {
       "type": "media",
@@ -56,10 +57,12 @@
       "component": "shared.theme"
     },
     "appName": {
-      "type": "string"
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$"
     },
     "tenentId": {
-      "type": "string"
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$"
     },
     "headerText": {
       "type": "richtext"
@@ -74,6 +77,10 @@
         "videos",
         "audios"
       ]
+    },
+    "appUrl": {
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$"
     }
   }
 }

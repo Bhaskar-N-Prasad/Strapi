@@ -36,8 +36,9 @@
       "repeatable": false,
       "component": "shared.geo-map"
     },
-    "appTheme": {
-      "type": "string"
+    "tenentId": {
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$"
     }
   }
 }
