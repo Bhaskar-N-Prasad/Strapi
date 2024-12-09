@@ -36,7 +36,28 @@ const styles = {
 const hexPattern = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{8})$/;
 const rgbPattern = /^rgb\(\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*\)$/;
 const rgbaPattern = /^rgba\(\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*,\s*(0|0?\.\d+|1)\s*\)$/;
-const gradientPattern = /^linear-gradient\((.+)\)$/i;
+const gradientPattern = {
+  test: (color) => {
+    return color.startsWith("linear-gradient");
+  }
+}
+
+const hexToRgba = (hex) => {
+  const alphaHex = hex.length === 9 ? hex.slice(7, 9) : 'FF';
+  const alpha = parseInt(alphaHex, 16) / 255;
+  const rgb = hex.slice(1, 7).match(/.{2}/g)?.map((val) => parseInt(val, 16)) || [0, 0, 0];
+  return rgbToHex(`rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha.toFixed(2)})`);
+};
+
+const rgbToHex = (rgb) => {
+  const rgbaMatch = rgb.match(/\d+/g);
+  if (!rgbaMatch) return '#000000';
+  return `#${rgbaMatch
+    .slice(0, 3)
+    .map((val) => Number(val).toString(16).padStart(2, '0'))
+    .join('')}`;
+};
+
 
 const Input = ({
   name,
@@ -52,6 +73,8 @@ const Input = ({
   const { formatMessage } = useIntl();
   const [color, setColor] = useState(value || "#000000");
   const [err, setError] = useState("");
+  const [pickerColor, setPickerColor] = useState("#000");
+
   
 
   const isValidColor = (color) => {
@@ -76,8 +99,18 @@ const Input = ({
   };
 
   useEffect(() => {
-    setColor(value || "#000000");
-  }, [value]);
+    // Convert RGB or RGBA to hex for the native color input
+    if (color.startsWith('#') || color.startsWith("linear-gradient")) {
+        setError("");
+        setPickerColor(color);
+    } else if (color.startsWith('rgb')) {
+        setError("");
+        const hexColor = rgbToHex(color);
+        setPickerColor(hexColor);
+    }else{
+        setError("Invalid color or gradient");
+    }
+  }, [color]);
 
   return (
     <div style={{ width: "100%" }}>
@@ -104,16 +137,14 @@ const Input = ({
         
         {/* Color Picker for solid colors */}
         {
-             gradientPattern.test(color) ? <div title="The gradients cannot be selected directly through the color picker but can be entered in the text input" style={{...styles.preview(color), position: "absolute"}} /> :  <input
+             gradientPattern.test(color) ? <div title="The gradients cannot be selected directly through the color picker but can be entered in the text input" style={{...styles.preview(color), position: "absolute"}} /> 
+             :  <input
              type="color"
-             value={color.startsWith("#") ? color : "#000000"} // Fallback to solid color for picker
+             value={color.length === 9 ? hexToRgba(color) : pickerColor} // Fallback to solid color for picker
              onChange={handleChange}
              style={{ ...styles.colorPicker, position: "absolute" }}
            />
         }
-       
-
-        {/* Preview of the color or gradient */}
         
       </div>
       {description && <p>{formatMessage(description)}</p>}
