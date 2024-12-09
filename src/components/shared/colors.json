@@ -7,8 +7,9 @@
   },
   "options": {},
   "attributes": {
-    "color": {
-      "type": "string"
+    "Colors": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
     }
   }
 }

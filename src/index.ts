@@ -1,5 +1,5 @@
 import type { Core } from '@strapi/strapi';
-import EditView from "./plugins/custom-button/admin/src/components/EditView";
+// import EditView from "./plugins/custom-button/admin/src/components/EditView";
 
 
 export default {
