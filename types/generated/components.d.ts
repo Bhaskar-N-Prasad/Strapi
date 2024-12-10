@@ -9,7 +9,9 @@ export interface FeaturesFeature extends Struct.ComponentSchema {
   attributes: {
     display: Schema.Attribute.Boolean &
       Schema.Attribute.CustomField<'plugin::checkbox.checkbox'>;
-    featureName: Schema.Attribute.String & Schema.Attribute.Required;
+    featureName: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     subFeatures: Schema.Attribute.Component<'features.section', true>;
   };
 }
@@ -23,7 +25,7 @@ export interface FeaturesSection extends Struct.ComponentSchema {
   attributes: {
     display: Schema.Attribute.Boolean &
       Schema.Attribute.CustomField<'plugin::checkbox.checkbox'>;
-    featureName: Schema.Attribute.String;
+    featureName: Schema.Attribute.String & Schema.Attribute.Unique;
     Subsections: Schema.Attribute.Component<'features.sub-section', true>;
   };
 }
@@ -37,7 +39,7 @@ export interface FeaturesSubSection extends Struct.ComponentSchema {
   attributes: {
     display: Schema.Attribute.Boolean &
       Schema.Attribute.CustomField<'plugin::checkbox.checkbox'>;
-    featureName: Schema.Attribute.String;
+    featureName: Schema.Attribute.String & Schema.Attribute.Unique;
   };
 }
 

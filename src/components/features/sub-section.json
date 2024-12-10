@@ -8,7 +8,8 @@
   "attributes": {
     "featureName": {
       "type": "string",
-      "regex": "^((?!<[^>]+>).)*$"
+      "regex": "^((?!<[^>]+>).)*$",
+      "unique": true
     },
     "display": {
       "type": "customField",

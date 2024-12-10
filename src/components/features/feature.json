@@ -9,7 +9,8 @@
     "featureName": {
       "type": "string",
       "regex": "^((?!<[^>]+>).)*$",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "subFeatures": {
       "type": "component",
