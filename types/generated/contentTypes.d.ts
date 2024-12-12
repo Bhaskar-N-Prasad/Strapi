@@ -381,6 +381,7 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    Button: Schema.Attribute.Component<'shared.button', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -392,9 +393,12 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
       'api::app-theme.app-theme'
     > &
       Schema.Attribute.Private;
+    pagination: Schema.Attribute.Component<'shared.pagination', false>;
     pieChart: Schema.Attribute.Component<'shared.pie-chart', false>;
     publishedAt: Schema.Attribute.DateTime;
+    sidebar: Schema.Attribute.Component<'shared.sidebar', false>;
     stackedGraph: Schema.Attribute.Component<'shared.stacked-graph', false>;
+    table: Schema.Attribute.Component<'shared.table', false>;
     tenentId: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -417,13 +421,13 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    feature: Schema.Attribute.Component<'features.feature', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::feature.feature'
     > &
       Schema.Attribute.Private;
+    pages: Schema.Attribute.Component<'features.feature', true>;
     publishedAt: Schema.Attribute.DateTime;
     tenentId: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -452,6 +456,9 @@ export interface ApiLoginLogin extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    dummy_test: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'test'>;
     features: Schema.Attribute.Component<'shared.features', false>;
     footer: Schema.Attribute.Component<'shared.footer', false>;
     headerText: Schema.Attribute.RichText;

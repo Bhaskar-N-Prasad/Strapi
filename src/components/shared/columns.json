@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_columns",
+  "info": {
+    "displayName": "columns"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$"
+    },
+    "display": {
+      "type": "customField",
+      "customField": "plugin::checkbox.checkbox"
+    }
+  }
+}

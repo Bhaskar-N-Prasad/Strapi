@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "feature": {
+    "pages": {
       "type": "component",
       "repeatable": true,
       "component": "features.feature"

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_paginations",
+  "info": {
+    "displayName": "pagination"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    }
+  }
+}

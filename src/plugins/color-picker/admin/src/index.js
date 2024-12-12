@@ -43,8 +43,31 @@ export default {
         Input: async () => import(/* webpackChunkName: "input-component" */ './components/Input'),
       },
       options: {
-        // declare options here
+        /*
+         Declare settings to be added to the "Advanced settings" section
+         of the field in the Content-Type Builder
+       */
+        basic: [
+          {
+            sectionTitle: {
+              id: `${PLUGIN_ID}.color.section.format`,
+              defaultMessage: 'Default Value', // Be more specific here
+            },
+            items: [
+              {
+                intlLabel: {
+                  id: `${PLUGIN_ID}.color.format.label`,
+                  defaultMessage: ' ',
+                },
+                name: 'options.default',
+                type: 'string', // The type of the default value is a string (color)
+                defaultValue: '#000000', // Default to an empty string or null, or a color like "#000000"
+              },
+            ],
+          },
+        ],
       },
+
       attributes: { type: String, customField: String },
     });
   },

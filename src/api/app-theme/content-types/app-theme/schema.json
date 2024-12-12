@@ -39,6 +39,30 @@
     "tenentId": {
       "type": "string",
       "regex": "^((?!<[^>]+>).)*$"
+    },
+    "Button": {
+      "displayName": "Button",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.button"
+    },
+    "sidebar": {
+      "displayName": "Sidebar",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.sidebar"
+    },
+    "pagination": {
+      "displayName": "pagination",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.pagination"
+    },
+    "table": {
+      "displayName": "table",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.table"
     }
   }
 }

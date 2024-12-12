@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_button_variant_hovers",
+  "info": {
+    "displayName": "hover"
+  },
+  "options": {},
+  "attributes": {
+    "border": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "background": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "text": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    }
+  }
+}

@@ -1,5 +1,20 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ButtonVariantHover extends Struct.ComponentSchema {
+  collectionName: 'components_button_variant_hovers';
+  info: {
+    displayName: 'hover';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    border: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    text: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+  };
+}
+
 export interface FeaturesFeature extends Struct.ComponentSchema {
   collectionName: 'components_features_features';
   info: {
@@ -9,10 +24,8 @@ export interface FeaturesFeature extends Struct.ComponentSchema {
   attributes: {
     display: Schema.Attribute.Boolean &
       Schema.Attribute.CustomField<'plugin::checkbox.checkbox'>;
-    featureName: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
-    subFeatures: Schema.Attribute.Component<'features.section', true>;
+    features: Schema.Attribute.Component<'features.section', true>;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -25,8 +38,8 @@ export interface FeaturesSection extends Struct.ComponentSchema {
   attributes: {
     display: Schema.Attribute.Boolean &
       Schema.Attribute.CustomField<'plugin::checkbox.checkbox'>;
-    featureName: Schema.Attribute.String & Schema.Attribute.Unique;
-    Subsections: Schema.Attribute.Component<'features.sub-section', true>;
+    name: Schema.Attribute.String;
+    sections: Schema.Attribute.Component<'features.sub-section', true>;
   };
 }
 
@@ -37,9 +50,10 @@ export interface FeaturesSubSection extends Struct.ComponentSchema {
     displayName: 'Sub-Section';
   };
   attributes: {
+    columns: Schema.Attribute.Component<'shared.columns', true>;
     display: Schema.Attribute.Boolean &
       Schema.Attribute.CustomField<'plugin::checkbox.checkbox'>;
-    featureName: Schema.Attribute.String & Schema.Attribute.Unique;
+    name: Schema.Attribute.String;
   };
 }
 
@@ -88,6 +102,17 @@ export interface SharedBenefits extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedButton extends Struct.ComponentSchema {
+  collectionName: 'components_shared_buttons';
+  info: {
+    displayName: 'Button';
+    icon: 'discuss';
+  };
+  attributes: {
+    variants: Schema.Attribute.Component<'shared.variant', true>;
+  };
+}
+
 export interface SharedCampaign extends Struct.ComponentSchema {
   collectionName: 'components_shared_campaigns';
   info: {
@@ -108,6 +133,18 @@ export interface SharedColors extends Struct.ComponentSchema {
   attributes: {
     Colors: Schema.Attribute.String &
       Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+  };
+}
+
+export interface SharedColumns extends Struct.ComponentSchema {
+  collectionName: 'components_shared_columns';
+  info: {
+    displayName: 'columns';
+  };
+  attributes: {
+    display: Schema.Attribute.Boolean &
+      Schema.Attribute.CustomField<'plugin::checkbox.checkbox'>;
+    name: Schema.Attribute.String;
   };
 }
 
@@ -245,6 +282,19 @@ export interface SharedOrder extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface SharedPagination extends Struct.ComponentSchema {
+  collectionName: 'components_shared_paginations';
+  info: {
+    displayName: 'pagination';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+  };
+}
+
 export interface SharedPieChart extends Struct.ComponentSchema {
   collectionName: 'components_shared_pie_charts';
   info: {
@@ -294,6 +344,23 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSidebar extends Struct.ComponentSchema {
+  collectionName: 'components_shared_sidebars';
+  info: {
+    displayName: 'Sidebar';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    selectedBackground: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    selectedText: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    text: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+  };
+}
+
 export interface SharedSlider extends Struct.ComponentSchema {
   collectionName: 'components_shared_sliders';
   info: {
@@ -313,6 +380,18 @@ export interface SharedStackedGraph extends Struct.ComponentSchema {
   };
   attributes: {
     colors: Schema.Attribute.Component<'shared.colors', true>;
+  };
+}
+
+export interface SharedTable extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tables';
+  info: {
+    description: '';
+    displayName: 'table';
+  };
+  attributes: {
+    body: Schema.Attribute.Component<'table.header', false>;
+    header: Schema.Attribute.Component<'table.header', false>;
   };
 }
 
@@ -349,17 +428,58 @@ export interface SharedTheme extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedVariant extends Struct.ComponentSchema {
+  collectionName: 'components_shared_variants';
+  info: {
+    displayName: 'variant';
+  };
+  attributes: {
+    active: Schema.Attribute.Component<'button-variant.hover', false>;
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    border: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    hover: Schema.Attribute.Component<'button-variant.hover', false>;
+    text: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+  };
+}
+
+export interface TableBody extends Struct.ComponentSchema {
+  collectionName: 'components_table_bodies';
+  info: {
+    displayName: 'body';
+  };
+  attributes: {};
+}
+
+export interface TableHeader extends Struct.ComponentSchema {
+  collectionName: 'components_table_headers';
+  info: {
+    displayName: 'header';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    border: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'button-variant.hover': ButtonVariantHover;
       'features.feature': FeaturesFeature;
       'features.section': FeaturesSection;
       'features.sub-section': FeaturesSubSection;
       'shared.area-graph': SharedAreaGraph;
       'shared.benefit-sections': SharedBenefitSections;
       'shared.benefits': SharedBenefits;
+      'shared.button': SharedButton;
       'shared.campaign': SharedCampaign;
       'shared.colors': SharedColors;
+      'shared.columns': SharedColumns;
       'shared.feature-list': SharedFeatureList;
       'shared.features': SharedFeatures;
       'shared.footer': SharedFooter;
@@ -371,14 +491,20 @@ declare module '@strapi/strapi' {
       'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.order': SharedOrder;
+      'shared.pagination': SharedPagination;
       'shared.pie-chart': SharedPieChart;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
+      'shared.sidebar': SharedSidebar;
       'shared.slider': SharedSlider;
       'shared.stacked-graph': SharedStackedGraph;
+      'shared.table': SharedTable;
       'shared.test': SharedTest;
       'shared.theme': SharedTheme;
+      'shared.variant': SharedVariant;
+      'table.body': TableBody;
+      'table.header': TableHeader;
     }
   }
 }

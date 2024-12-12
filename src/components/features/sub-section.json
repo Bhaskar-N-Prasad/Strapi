@@ -6,14 +6,20 @@
   },
   "options": {},
   "attributes": {
-    "featureName": {
+    "name": {
       "type": "string",
       "regex": "^((?!<[^>]+>).)*$",
-      "unique": true
+      "unique": false
     },
     "display": {
       "type": "customField",
       "customField": "plugin::checkbox.checkbox"
+    },
+    "columns": {
+      "displayName": "columns",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.columns"
     }
   }
 }

@@ -6,13 +6,13 @@
   },
   "options": {},
   "attributes": {
-    "featureName": {
+    "name": {
       "type": "string",
       "regex": "^((?!<[^>]+>).)*$",
       "required": true,
-      "unique": true
+      "unique": false
     },
-    "subFeatures": {
+    "features": {
       "type": "component",
       "repeatable": true,
       "component": "features.section"

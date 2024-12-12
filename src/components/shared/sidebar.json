@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_sidebars",
+  "info": {
+    "displayName": "Sidebar"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "text": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "selectedText": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "selectedBackground": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    }
+  }
+}

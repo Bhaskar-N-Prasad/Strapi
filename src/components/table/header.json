@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_table_headers",
+  "info": {
+    "displayName": "header"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "border": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    }
+  }
+}
