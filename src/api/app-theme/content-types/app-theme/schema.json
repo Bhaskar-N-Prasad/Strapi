@@ -63,6 +63,24 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.table"
+    },
+    "leadProfile": {
+      "displayName": "leadProfile",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.lead-profile"
+    },
+    "link": {
+      "displayName": "link",
+      "type": "component",
+      "repeatable": false,
+      "component": "app.link"
+    },
+    "engagementLevel": {
+      "displayName": "engagementLevel",
+      "type": "component",
+      "repeatable": false,
+      "component": "app.engagement-level"
     }
   }
 }

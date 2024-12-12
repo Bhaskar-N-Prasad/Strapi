@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_app_links",
+  "info": {
+    "displayName": "link"
+  },
+  "options": {},
+  "attributes": {
+    "color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "background": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    }
+  }
+}

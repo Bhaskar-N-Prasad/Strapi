@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_engagement_levels",
+  "info": {
+    "displayName": "level"
+  },
+  "options": {},
+  "attributes": {
+    "color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    }
+  }
+}

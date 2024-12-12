@@ -1,5 +1,27 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AppEngagementLevel extends Struct.ComponentSchema {
+  collectionName: 'components_app_engagement_levels';
+  info: {
+    description: '';
+    displayName: 'engagementLevel';
+  };
+  attributes: {};
+}
+
+export interface AppLink extends Struct.ComponentSchema {
+  collectionName: 'components_app_links';
+  info: {
+    displayName: 'link';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+  };
+}
+
 export interface ButtonVariantHover extends Struct.ComponentSchema {
   collectionName: 'components_button_variant_hovers';
   info: {
@@ -11,6 +33,17 @@ export interface ButtonVariantHover extends Struct.ComponentSchema {
     border: Schema.Attribute.String &
       Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
     text: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+  };
+}
+
+export interface EngagementLevel extends Struct.ComponentSchema {
+  collectionName: 'components_engagement_levels';
+  info: {
+    displayName: 'level';
+  };
+  attributes: {
+    color: Schema.Attribute.String &
       Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
   };
 }
@@ -54,6 +87,17 @@ export interface FeaturesSubSection extends Struct.ComponentSchema {
     display: Schema.Attribute.Boolean &
       Schema.Attribute.CustomField<'plugin::checkbox.checkbox'>;
     name: Schema.Attribute.String;
+  };
+}
+
+export interface LeadprofileNatureOfBusiness extends Struct.ComponentSchema {
+  collectionName: 'components_leadprofile_nature_of_businesses';
+  info: {
+    displayName: 'natureOfBusiness';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
   };
 }
 
@@ -225,6 +269,20 @@ export interface SharedLableStyle extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedLeadProfile extends Struct.ComponentSchema {
+  collectionName: 'components_shared_lead_profiles';
+  info: {
+    displayName: 'leadProfile';
+  };
+  attributes: {
+    natureOfBusniess: Schema.Attribute.Component<
+      'leadprofile.nature-of-business',
+      false
+    >;
+    segments: Schema.Attribute.Component<'shared.segments', false>;
+  };
+}
+
 export interface SharedLineGraph extends Struct.ComponentSchema {
   collectionName: 'components_shared_line_graphs';
   info: {
@@ -326,6 +384,19 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
   attributes: {
     body: Schema.Attribute.RichText;
+  };
+}
+
+export interface SharedSegments extends Struct.ComponentSchema {
+  collectionName: 'components_shared_segments';
+  info: {
+    displayName: 'segments';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    chipBackground: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
   };
 }
 
@@ -456,6 +527,7 @@ export interface TableBody extends Struct.ComponentSchema {
 export interface TableHeader extends Struct.ComponentSchema {
   collectionName: 'components_table_headers';
   info: {
+    description: '';
     displayName: 'header';
   };
   attributes: {
@@ -463,16 +535,32 @@ export interface TableHeader extends Struct.ComponentSchema {
       Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
     border: Schema.Attribute.String &
       Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+    hover: Schema.Attribute.Component<'table.hover', false>;
+  };
+}
+
+export interface TableHover extends Struct.ComponentSchema {
+  collectionName: 'components_table_hovers';
+  info: {
+    displayName: 'hover';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
   };
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'app.engagement-level': AppEngagementLevel;
+      'app.link': AppLink;
       'button-variant.hover': ButtonVariantHover;
+      'engagement.level': EngagementLevel;
       'features.feature': FeaturesFeature;
       'features.section': FeaturesSection;
       'features.sub-section': FeaturesSubSection;
+      'leadprofile.nature-of-business': LeadprofileNatureOfBusiness;
       'shared.area-graph': SharedAreaGraph;
       'shared.benefit-sections': SharedBenefitSections;
       'shared.benefits': SharedBenefits;
@@ -486,6 +574,7 @@ declare module '@strapi/strapi' {
       'shared.geo-map': SharedGeoMap;
       'shared.item-style': SharedItemStyle;
       'shared.lable-style': SharedLableStyle;
+      'shared.lead-profile': SharedLeadProfile;
       'shared.line-graph': SharedLineGraph;
       'shared.line-style': SharedLineStyle;
       'shared.link': SharedLink;
@@ -495,6 +584,7 @@ declare module '@strapi/strapi' {
       'shared.pie-chart': SharedPieChart;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
+      'shared.segments': SharedSegments;
       'shared.seo': SharedSeo;
       'shared.sidebar': SharedSidebar;
       'shared.slider': SharedSlider;
@@ -505,6 +595,7 @@ declare module '@strapi/strapi' {
       'shared.variant': SharedVariant;
       'table.body': TableBody;
       'table.header': TableHeader;
+      'table.hover': TableHover;
     }
   }
 }

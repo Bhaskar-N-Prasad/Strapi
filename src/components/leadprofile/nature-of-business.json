@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_leadprofile_nature_of_businesses",
+  "info": {
+    "displayName": "natureOfBusiness"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color-picker"
+    }
+  }
+}

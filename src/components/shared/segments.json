@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_table_headers",
+  "collectionName": "components_shared_segments",
   "info": {
-    "displayName": "header",
-    "description": ""
+    "displayName": "segments"
   },
   "options": {},
   "attributes": {
@@ -10,15 +9,9 @@
       "type": "customField",
       "customField": "plugin::color-picker.color-picker"
     },
-    "border": {
+    "chipBackground": {
       "type": "customField",
       "customField": "plugin::color-picker.color-picker"
-    },
-    "hover": {
-      "displayName": "hover",
-      "type": "component",
-      "repeatable": false,
-      "component": "table.hover"
     }
   }
 }

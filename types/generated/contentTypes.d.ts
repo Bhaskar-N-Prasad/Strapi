@@ -385,8 +385,11 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    engagementLevel: Schema.Attribute.Component<'app.engagement-level', false>;
     geoMap: Schema.Attribute.Component<'shared.geo-map', false>;
+    leadProfile: Schema.Attribute.Component<'shared.lead-profile', false>;
     lineGraph: Schema.Attribute.Component<'shared.line-graph', false>;
+    link: Schema.Attribute.Component<'app.link', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

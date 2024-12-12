@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_lead_profiles",
+  "info": {
+    "displayName": "leadProfile"
+  },
+  "options": {},
+  "attributes": {
+    "segments": {
+      "displayName": "segments",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.segments"
+    },
+    "natureOfBusniess": {
+      "displayName": "natureOfBusiness",
+      "type": "component",
+      "repeatable": false,
+      "component": "leadprofile.nature-of-business"
+    }
+  }
+}
