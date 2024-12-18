@@ -403,6 +403,11 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
     stackedGraph: Schema.Attribute.Component<'shared.stacked-graph', false>;
     table: Schema.Attribute.Component<'shared.table', false>;
     tenentId: Schema.Attribute.String;
+    tooltip: Schema.Attribute.Component<'app.tooltip', false>;
+    topicEngagementLevel: Schema.Attribute.Component<
+      'app.engagement-level',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -37,6 +37,53 @@ export default {
       },
       options: {
         // declare options here
+        base: [
+          {
+            sectionTitle: {
+              id: `${PLUGIN_ID}.checkbox.section`, // unique id 
+              defaultMessage: " ",
+            },
+            items: [
+              // Add settings items to the section
+              {
+                /*
+                  Add a "True or False" dropdown to choose either true or false.
+                */
+                intlLabel: {
+                  id: `${PLUGIN_ID}.checkbox.section.format`,
+                  defaultMessage: "Select Default value",
+                },
+                name: "options.default",
+                type: "select",  // Use select to allow users to choose true or false
+                defaultValue: true,  // Default selected value (true)
+                options: [
+                  {
+                    key: 0,
+                    value: true,  // true option
+                    type:'boolean',
+                    metadatas: {
+                      intlLabel: {
+                        id: `${PLUGIN_ID}.checkbox.section.format.true`,
+                        defaultMessage: "True",
+                      },
+                    },
+                  },
+                  {
+                    key: 1,
+                    value: false,  // false option
+                    type:"boolean",
+                    metadatas: {
+                      intlLabel: {
+                        id: `${PLUGIN_ID}.checkbox.section.format.false`,
+                        defaultMessage: "False",
+                      },
+                    },
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
       attributes: { type: String, customField: String },
     });

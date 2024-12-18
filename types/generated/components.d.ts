@@ -6,19 +6,35 @@ export interface AppEngagementLevel extends Struct.ComponentSchema {
     description: '';
     displayName: 'engagementLevel';
   };
-  attributes: {};
+  attributes: {
+    level: Schema.Attribute.Component<'engagement.engagement-levels', true>;
+  };
 }
 
 export interface AppLink extends Struct.ComponentSchema {
   collectionName: 'components_app_links';
   info: {
+    description: '';
     displayName: 'link';
   };
   attributes: {
-    background: Schema.Attribute.String &
-      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
     color: Schema.Attribute.String &
-      Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#11a7d9';
+        }
+      >;
+  };
+}
+
+export interface AppTooltip extends Struct.ComponentSchema {
+  collectionName: 'components_app_tooltips';
+  info: {
+    displayName: 'tooltip';
+  };
+  attributes: {
+    variant: Schema.Attribute.Component<'tooltip.variant', true>;
   };
 }
 
@@ -34,6 +50,23 @@ export interface ButtonVariantHover extends Struct.ComponentSchema {
       Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
     text: Schema.Attribute.String &
       Schema.Attribute.CustomField<'plugin::color-picker.color-picker'>;
+  };
+}
+
+export interface EngagementEngagementLevels extends Struct.ComponentSchema {
+  collectionName: 'components_engagement_engagement_levels';
+  info: {
+    displayName: 'engagementLevels';
+  };
+  attributes: {
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    name: Schema.Attribute.String;
   };
 }
 
@@ -149,11 +182,12 @@ export interface SharedBenefits extends Struct.ComponentSchema {
 export interface SharedButton extends Struct.ComponentSchema {
   collectionName: 'components_shared_buttons';
   info: {
+    description: '';
     displayName: 'Button';
     icon: 'discuss';
   };
   attributes: {
-    variants: Schema.Attribute.Component<'shared.variant', true>;
+    default: Schema.Attribute.Component<'shared.variant', false>;
   };
 }
 
@@ -550,12 +584,37 @@ export interface TableHover extends Struct.ComponentSchema {
   };
 }
 
+export interface TooltipVariant extends Struct.ComponentSchema {
+  collectionName: 'components_tooltip_variants';
+  info: {
+    displayName: 'variant';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    text: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'app.engagement-level': AppEngagementLevel;
       'app.link': AppLink;
+      'app.tooltip': AppTooltip;
       'button-variant.hover': ButtonVariantHover;
+      'engagement.engagement-levels': EngagementEngagementLevels;
       'engagement.level': EngagementLevel;
       'features.feature': FeaturesFeature;
       'features.section': FeaturesSection;
@@ -596,6 +655,7 @@ declare module '@strapi/strapi' {
       'table.body': TableBody;
       'table.header': TableHeader;
       'table.hover': TableHover;
+      'tooltip.variant': TooltipVariant;
     }
   }
 }

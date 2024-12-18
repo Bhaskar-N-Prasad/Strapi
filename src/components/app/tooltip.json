@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_app_tooltips",
+  "info": {
+    "displayName": "tooltip"
+  },
+  "options": {},
+  "attributes": {
+    "variant": {
+      "displayName": "variant",
+      "type": "component",
+      "repeatable": true,
+      "component": "tooltip.variant"
+    }
+  }
+}

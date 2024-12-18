@@ -2,14 +2,14 @@
   "collectionName": "components_shared_buttons",
   "info": {
     "displayName": "Button",
-    "icon": "discuss"
+    "icon": "discuss",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "variants": {
-      "displayName": "variant",
+    "default": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.variant"
     }
   }

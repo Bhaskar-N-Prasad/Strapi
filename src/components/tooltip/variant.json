@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_tooltip_variants",
+  "info": {
+    "displayName": "variant"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "text": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    }
+  }
+}

@@ -81,6 +81,17 @@
       "type": "component",
       "repeatable": false,
       "component": "app.engagement-level"
+    },
+    "topicEngagementLevel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "app.engagement-level"
+    },
+    "tooltip": {
+      "displayName": "tooltip",
+      "type": "component",
+      "repeatable": false,
+      "component": "app.tooltip"
     }
   }
 }

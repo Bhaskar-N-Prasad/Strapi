@@ -40,7 +40,7 @@ const Checkbox = ({
         <label htmlFor={name} style={{fontWeight: 600}}>
           {label}
         </label>
-        <input style={styles.input} type="checkbox" checked={value} onChange={handleChange}   />
+        <input style={styles.input} type="checkbox" checked={value === undefined ? attribute?.options?.default : value} onChange={handleChange}   />
       </div>
 };
 

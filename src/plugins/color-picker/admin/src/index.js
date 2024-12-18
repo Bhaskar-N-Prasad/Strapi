@@ -47,17 +47,17 @@ export default {
          Declare settings to be added to the "Advanced settings" section
          of the field in the Content-Type Builder
        */
-        basic: [
+        base: [
           {
             sectionTitle: {
               id: `${PLUGIN_ID}.color.section.format`,
-              defaultMessage: 'Default Value', // Be more specific here
+              defaultMessage: ' ', // Be more specific here
             },
             items: [
               {
                 intlLabel: {
                   id: `${PLUGIN_ID}.color.format.label`,
-                  defaultMessage: ' ',
+                  defaultMessage: 'Default Value',
                 },
                 name: 'options.default',
                 type: 'string', // The type of the default value is a string (color)

@@ -71,9 +71,9 @@ const Input = ({
   ...props
 }) => {
   const { formatMessage } = useIntl();
-  const [color, setColor] = useState(value || "#000000");
+  const [color, setColor] = useState(value == undefined ? (attribute?.options?.default || "#ffffff") : value);
   const [err, setError] = useState("");
-  const [pickerColor, setPickerColor] = useState("#000");
+  const [pickerColor, setPickerColor] = useState("#ffffff");
 
   
 

@@ -5,5 +5,12 @@
     "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "level": {
+      "displayName": "engagementLevels",
+      "type": "component",
+      "repeatable": true,
+      "component": "engagement.engagement-levels"
+    }
+  }
 }
