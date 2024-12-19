@@ -387,6 +387,7 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     engagementLevel: Schema.Attribute.Component<'app.engagement-level', false>;
     geoMap: Schema.Attribute.Component<'shared.geo-map', false>;
+    jobTitileBg: Schema.Attribute.Component<'shared.colors', true>;
     leadProfile: Schema.Attribute.Component<'shared.lead-profile', false>;
     lineGraph: Schema.Attribute.Component<'shared.line-graph', false>;
     link: Schema.Attribute.Component<'app.link', false>;

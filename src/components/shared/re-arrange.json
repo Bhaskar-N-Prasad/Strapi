@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_shared_re_arranges",
+  "info": {
+    "displayName": "reArrange"
+  },
+  "options": {},
+  "attributes": {
+    "borderRadius": {
+      "type": "string"
+    },
+    "border": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "background": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "header": {
+      "displayName": "fomat1",
+      "type": "component",
+      "repeatable": false,
+      "component": "re-arrange-variant.fomat1"
+    },
+    "buttons": {
+      "displayName": "buttons",
+      "type": "component",
+      "repeatable": false,
+      "component": "re-arrange-variant.buttons"
+    },
+    "divider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button-variant.hover5"
+    },
+    "section": {
+      "displayName": "section",
+      "type": "component",
+      "repeatable": false,
+      "component": "re-arrange-variant.section"
+    }
+  }
+}

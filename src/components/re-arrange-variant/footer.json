@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_re_arrange_variant_footers",
+  "info": {
+    "displayName": "footer"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "boxShadow": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "color": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "fontSize": {
+      "type": "string"
+    },
+    "fontStyle": {
+      "type": "string"
+    },
+    "fontWeight": {
+      "type": "biginteger"
+    }
+  }
+}

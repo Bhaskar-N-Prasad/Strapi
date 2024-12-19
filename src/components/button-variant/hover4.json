@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_button_variant_hover4s",
+  "info": {
+    "displayName": "hover4"
+  },
+  "options": {},
+  "attributes": {
+    "border": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "background": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    }
+  }
+}

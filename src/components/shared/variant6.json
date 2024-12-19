@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_variant6s",
+  "info": {
+    "displayName": "variant6"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "color": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "border": {
+      "type": "string"
+    },
+    "hover": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button-variant.hover5"
+    }
+  }
+}

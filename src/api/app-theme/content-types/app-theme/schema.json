@@ -92,6 +92,11 @@
       "type": "component",
       "repeatable": false,
       "component": "app.tooltip"
+    },
+    "jobTitileBg": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.colors"
     }
   }
 }

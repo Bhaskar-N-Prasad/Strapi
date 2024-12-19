@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_shared_variant2s",
+  "info": {
+    "displayName": "variant2"
+  },
+  "options": {},
+  "attributes": {
+    "border": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "background": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "color": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "hover": {
+      "displayName": "hover6",
+      "type": "component",
+      "repeatable": false,
+      "component": "button-variant.hover6"
+    },
+    "active": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button-variant.hover6"
+    }
+  }
+}

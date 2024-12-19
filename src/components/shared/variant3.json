@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shared_variant3s",
+  "info": {
+    "displayName": "variant3"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "color": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "border": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "hover": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button-variant.hover5"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_re_arrange_variant_fomat1s",
+  "info": {
+    "displayName": "fomat1"
+  },
+  "options": {},
+  "attributes": {
+    "color": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "fontSize": {
+      "type": "string"
+    },
+    "fontStyle": {
+      "type": "string"
+    },
+    "fontWeight": {
+      "type": "biginteger"
+    }
+  }
+}

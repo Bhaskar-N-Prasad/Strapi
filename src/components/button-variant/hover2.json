@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_button_variant_hover2s",
+  "info": {
+    "displayName": "hover2"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "color": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "border": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    }
+  }
+}

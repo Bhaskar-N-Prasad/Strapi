@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_button_variant_hover3s",
+  "info": {
+    "displayName": "hover3"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "color": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    }
+  }
+}

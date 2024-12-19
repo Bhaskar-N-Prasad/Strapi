@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_button_variant_hover5s",
+  "info": {
+    "displayName": "hover5"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    }
+  }
+}

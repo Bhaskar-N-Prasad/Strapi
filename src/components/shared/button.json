@@ -11,6 +11,46 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.variant"
+    },
+    "defaultActiveBlue": {
+      "displayName": "variant2",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.variant2"
+    },
+    "outlined": {
+      "displayName": "variant3",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.variant3"
+    },
+    "light": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button-variant.hover2"
+    },
+    "transparent": {
+      "displayName": "variant4",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.variant4"
+    },
+    "navy": {
+      "displayName": "variant5",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.variant5"
+    },
+    "selected": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button-variant.hover3"
+    },
+    "grey": {
+      "displayName": "variant6",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.variant6"
     }
   }
 }

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_button_variant_hover6s",
+  "info": {
+    "displayName": "hover6"
+  },
+  "options": {},
+  "attributes": {
+    "border": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "color": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    }
+  }
+}

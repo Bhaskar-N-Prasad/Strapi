@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_re_arrange_variant_sections",
+  "info": {
+    "displayName": "section"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "borderRadius": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "re-arrange-variant.fomat1"
+    },
+    "subSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "re-arrange-variant.fomat1"
+    },
+    "footer": {
+      "displayName": "footer",
+      "type": "component",
+      "repeatable": false,
+      "component": "re-arrange-variant.footer"
+    },
+    "toggle": {
+      "displayName": "toggle",
+      "type": "component",
+      "repeatable": false,
+      "component": "re-arrange-variant.toggle"
+    }
+  }
+}

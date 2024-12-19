@@ -53,6 +53,121 @@ export interface ButtonVariantHover extends Struct.ComponentSchema {
   };
 }
 
+export interface ButtonVariantHover2 extends Struct.ComponentSchema {
+  collectionName: 'components_button_variant_hover2s';
+  info: {
+    displayName: 'hover2';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    border: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+  };
+}
+
+export interface ButtonVariantHover3 extends Struct.ComponentSchema {
+  collectionName: 'components_button_variant_hover3s';
+  info: {
+    displayName: 'hover3';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+  };
+}
+
+export interface ButtonVariantHover4 extends Struct.ComponentSchema {
+  collectionName: 'components_button_variant_hover4s';
+  info: {
+    displayName: 'hover4';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    border: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+  };
+}
+
+export interface ButtonVariantHover5 extends Struct.ComponentSchema {
+  collectionName: 'components_button_variant_hover5s';
+  info: {
+    displayName: 'hover5';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+  };
+}
+
+export interface ButtonVariantHover6 extends Struct.ComponentSchema {
+  collectionName: 'components_button_variant_hover6s';
+  info: {
+    displayName: 'hover6';
+  };
+  attributes: {
+    border: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+  };
+}
+
 export interface EngagementEngagementLevels extends Struct.ComponentSchema {
   collectionName: 'components_engagement_engagement_levels';
   info: {
@@ -134,6 +249,114 @@ export interface LeadprofileNatureOfBusiness extends Struct.ComponentSchema {
   };
 }
 
+export interface ReArrangeVariantButtons extends Struct.ComponentSchema {
+  collectionName: 'components_re_arrange_variant_buttons';
+  info: {
+    displayName: 'buttons';
+  };
+  attributes: {
+    apply: Schema.Attribute.Component<'re-arrange-variant.color', false>;
+    common: Schema.Attribute.Component<'re-arrange-variant.fomat1', false>;
+  };
+}
+
+export interface ReArrangeVariantColor extends Struct.ComponentSchema {
+  collectionName: 'components_re_arrange_variant_colors';
+  info: {
+    displayName: 'color';
+  };
+  attributes: {
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+  };
+}
+
+export interface ReArrangeVariantFomat1 extends Struct.ComponentSchema {
+  collectionName: 'components_re_arrange_variant_fomat1s';
+  info: {
+    displayName: 'fomat1';
+  };
+  attributes: {
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    fontSize: Schema.Attribute.String;
+    fontStyle: Schema.Attribute.String;
+    fontWeight: Schema.Attribute.BigInteger;
+  };
+}
+
+export interface ReArrangeVariantFooter extends Struct.ComponentSchema {
+  collectionName: 'components_re_arrange_variant_footers';
+  info: {
+    displayName: 'footer';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    boxShadow: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    fontSize: Schema.Attribute.String;
+    fontStyle: Schema.Attribute.String;
+    fontWeight: Schema.Attribute.BigInteger;
+  };
+}
+
+export interface ReArrangeVariantSection extends Struct.ComponentSchema {
+  collectionName: 'components_re_arrange_variant_sections';
+  info: {
+    displayName: 'section';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    borderRadius: Schema.Attribute.String;
+    footer: Schema.Attribute.Component<'re-arrange-variant.footer', false>;
+    heading: Schema.Attribute.Component<'re-arrange-variant.fomat1', false>;
+    subSection: Schema.Attribute.Component<'re-arrange-variant.fomat1', false>;
+    toggle: Schema.Attribute.Component<'re-arrange-variant.toggle', false>;
+  };
+}
+
+export interface ReArrangeVariantToggle extends Struct.ComponentSchema {
+  collectionName: 'components_re_arrange_variant_toggles';
+  info: {
+    displayName: 'toggle';
+  };
+  attributes: {};
+}
+
 export interface SharedAreaGraph extends Struct.ComponentSchema {
   collectionName: 'components_shared_area_graphs';
   info: {
@@ -188,6 +411,13 @@ export interface SharedButton extends Struct.ComponentSchema {
   };
   attributes: {
     default: Schema.Attribute.Component<'shared.variant', false>;
+    defaultActiveBlue: Schema.Attribute.Component<'shared.variant2', false>;
+    grey: Schema.Attribute.Component<'shared.variant6', false>;
+    light: Schema.Attribute.Component<'button-variant.hover2', false>;
+    navy: Schema.Attribute.Component<'shared.variant5', false>;
+    outlined: Schema.Attribute.Component<'shared.variant3', false>;
+    selected: Schema.Attribute.Component<'button-variant.hover3', false>;
+    transparent: Schema.Attribute.Component<'shared.variant4', false>;
   };
 }
 
@@ -409,6 +639,34 @@ export interface SharedQuote extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedReArrange extends Struct.ComponentSchema {
+  collectionName: 'components_shared_re_arranges';
+  info: {
+    displayName: 'reArrange';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    border: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    borderRadius: Schema.Attribute.String;
+    buttons: Schema.Attribute.Component<'re-arrange-variant.buttons', false>;
+    divider: Schema.Attribute.Component<'button-variant.hover5', false>;
+    header: Schema.Attribute.Component<'re-arrange-variant.fomat1', false>;
+    section: Schema.Attribute.Component<'re-arrange-variant.section', false>;
+  };
+}
+
 export interface SharedRichText extends Struct.ComponentSchema {
   collectionName: 'components_shared_rich_texts';
   info: {
@@ -550,6 +808,160 @@ export interface SharedVariant extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedVariant2 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_variant2s';
+  info: {
+    displayName: 'variant2';
+  };
+  attributes: {
+    active: Schema.Attribute.Component<'button-variant.hover6', false>;
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    border: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    hover: Schema.Attribute.Component<'button-variant.hover6', false>;
+  };
+}
+
+export interface SharedVariant3 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_variant3s';
+  info: {
+    displayName: 'variant3';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    border: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    hover: Schema.Attribute.Component<'button-variant.hover5', false>;
+  };
+}
+
+export interface SharedVariant4 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_variant4s';
+  info: {
+    displayName: 'variant4';
+  };
+  attributes: {
+    active: Schema.Attribute.Component<'button-variant.hover5', false>;
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    border: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    hover: Schema.Attribute.Component<'button-variant.hover5', false>;
+  };
+}
+
+export interface SharedVariant5 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_variant5s';
+  info: {
+    displayName: 'variant5';
+  };
+  attributes: {
+    active: Schema.Attribute.Component<'button-variant.hover5', false>;
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    border: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    disabled: Schema.Attribute.Component<'button-variant.hover4', false>;
+    fontFamily: Schema.Attribute.String;
+    hover: Schema.Attribute.Component<'button-variant.hover5', false>;
+  };
+}
+
+export interface SharedVariant6 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_variant6s';
+  info: {
+    displayName: 'variant6';
+  };
+  attributes: {
+    background: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    border: Schema.Attribute.String;
+    color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    hover: Schema.Attribute.Component<'button-variant.hover5', false>;
+  };
+}
+
 export interface TableBody extends Struct.ComponentSchema {
   collectionName: 'components_table_bodies';
   info: {
@@ -614,12 +1026,23 @@ declare module '@strapi/strapi' {
       'app.link': AppLink;
       'app.tooltip': AppTooltip;
       'button-variant.hover': ButtonVariantHover;
+      'button-variant.hover2': ButtonVariantHover2;
+      'button-variant.hover3': ButtonVariantHover3;
+      'button-variant.hover4': ButtonVariantHover4;
+      'button-variant.hover5': ButtonVariantHover5;
+      'button-variant.hover6': ButtonVariantHover6;
       'engagement.engagement-levels': EngagementEngagementLevels;
       'engagement.level': EngagementLevel;
       'features.feature': FeaturesFeature;
       'features.section': FeaturesSection;
       'features.sub-section': FeaturesSubSection;
       'leadprofile.nature-of-business': LeadprofileNatureOfBusiness;
+      're-arrange-variant.buttons': ReArrangeVariantButtons;
+      're-arrange-variant.color': ReArrangeVariantColor;
+      're-arrange-variant.fomat1': ReArrangeVariantFomat1;
+      're-arrange-variant.footer': ReArrangeVariantFooter;
+      're-arrange-variant.section': ReArrangeVariantSection;
+      're-arrange-variant.toggle': ReArrangeVariantToggle;
       'shared.area-graph': SharedAreaGraph;
       'shared.benefit-sections': SharedBenefitSections;
       'shared.benefits': SharedBenefits;
@@ -642,6 +1065,7 @@ declare module '@strapi/strapi' {
       'shared.pagination': SharedPagination;
       'shared.pie-chart': SharedPieChart;
       'shared.quote': SharedQuote;
+      'shared.re-arrange': SharedReArrange;
       'shared.rich-text': SharedRichText;
       'shared.segments': SharedSegments;
       'shared.seo': SharedSeo;
@@ -652,6 +1076,11 @@ declare module '@strapi/strapi' {
       'shared.test': SharedTest;
       'shared.theme': SharedTheme;
       'shared.variant': SharedVariant;
+      'shared.variant2': SharedVariant2;
+      'shared.variant3': SharedVariant3;
+      'shared.variant4': SharedVariant4;
+      'shared.variant5': SharedVariant5;
+      'shared.variant6': SharedVariant6;
       'table.body': TableBody;
       'table.header': TableHeader;
       'table.hover': TableHover;
