@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_tooltip_variants",
+  "collectionName": "components_login_footers",
   "info": {
-    "displayName": "variant",
-    "description": ""
+    "displayName": "footer"
   },
   "options": {},
   "attributes": {

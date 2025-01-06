@@ -81,11 +81,6 @@
     "appUrl": {
       "type": "string",
       "regex": "^((?!<[^>]+>).)*$"
-    },
-    "dummy_test": {
-      "type": "string",
-      "required": true,
-      "default": "test"
     }
   }
 }

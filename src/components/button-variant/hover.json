@@ -1,21 +1,31 @@
 {
   "collectionName": "components_button_variant_hovers",
   "info": {
-    "displayName": "hover"
+    "displayName": "hover",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "border": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker"
+      "customField": "plugin::color-picker.color-picker",
+      "options": {
+        "default": "#000000"
+      }
     },
     "background": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker"
+      "customField": "plugin::color-picker.color-picker",
+      "options": {
+        "default": "#000000"
+      }
     },
-    "text": {
+    "color": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker"
+      "customField": "plugin::color-picker.color-picker",
+      "options": {
+        "default": "#FFFFFF"
+      }
     }
   }
 }

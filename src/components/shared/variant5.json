@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_variant5s",
   "info": {
-    "displayName": "variant5"
+    "displayName": "variant5",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -19,10 +20,10 @@
       },
       "customField": "plugin::color-picker.color-picker"
     },
-    "color": {
+    "text": {
       "type": "customField",
       "options": {
-        "default": "#000000"
+        "default": "#FFFFFF"
       },
       "customField": "plugin::color-picker.color-picker"
     },

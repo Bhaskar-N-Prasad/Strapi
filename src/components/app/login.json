@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_app_logins",
+  "info": {
+    "displayName": "login"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "displayName": "header",
+      "type": "component",
+      "repeatable": false,
+      "component": "login.header"
+    },
+    "widgetBackground": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "login.footer"
+    }
+  }
+}

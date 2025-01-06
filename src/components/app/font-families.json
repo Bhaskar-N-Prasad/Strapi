@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_app_font_families",
+  "info": {
+    "displayName": "fontFamilies"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string",
+      "default": "opensans"
+    },
+    "title": {
+      "type": "string",
+      "default": "aleo"
+    }
+  }
+}

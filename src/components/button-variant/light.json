@@ -1,39 +1,38 @@
 {
-  "collectionName": "components_shared_variants",
+  "collectionName": "components_button_variant_lights",
   "info": {
-    "displayName": "variant",
+    "displayName": "light",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "border": {
+    "color": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker",
       "options": {
         "default": "#000000"
-      }
+      },
+      "customField": "plugin::color-picker.color-picker"
     },
     "background": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker",
       "options": {
         "default": "#000000"
-      }
+      },
+      "customField": "plugin::color-picker.color-picker"
     },
-    "color": {
+    "border": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker",
       "options": {
-        "default": "#FFFFFF"
-      }
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
     },
-    "hover": {
-      "displayName": "hover",
+    "active": {
       "type": "component",
       "repeatable": false,
       "component": "button-variant.hover"
     },
-    "active": {
+    "hover": {
       "type": "component",
       "repeatable": false,
       "component": "button-variant.hover"
@@ -44,8 +43,7 @@
       "component": "button-variant.hover"
     },
     "fontFamily": {
-      "type": "string",
-      "default": "opensans"
+      "type": "string"
     }
   }
 }

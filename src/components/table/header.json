@@ -8,11 +8,17 @@
   "attributes": {
     "background": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker"
+      "customField": "plugin::color-picker.color-picker",
+      "options": {
+        "default": "#FFFFFF"
+      }
     },
     "border": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker"
+      "customField": "plugin::color-picker.color-picker",
+      "options": {
+        "default": "#000000"
+      }
     },
     "hover": {
       "displayName": "hover",

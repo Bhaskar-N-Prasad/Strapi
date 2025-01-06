@@ -1,25 +1,17 @@
 {
-  "collectionName": "components_engagement_engagement_levels",
+  "collectionName": "components_table_colors",
   "info": {
-    "displayName": "engagementLevels",
+    "displayName": "colors",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
     "color": {
       "type": "customField",
       "options": {
         "default": "#000000"
       },
       "customField": "plugin::color-picker.color-picker"
-    },
-    "value": {
-      "type": "integer",
-      "max": 100,
-      "min": 0
     }
   }
 }

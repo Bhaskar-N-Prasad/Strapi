@@ -16,6 +16,11 @@
       "type": "component",
       "repeatable": false,
       "component": "table.header"
+    },
+    "highlightColumn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "table.hightlight-column"
     }
   }
 }

@@ -381,15 +381,20 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    appBackground: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
     Button: Schema.Attribute.Component<'shared.button', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     engagementLevel: Schema.Attribute.Component<'app.engagement-level', false>;
-    geoMap: Schema.Attribute.Component<'shared.geo-map', false>;
-    jobTitileBg: Schema.Attribute.Component<'shared.colors', true>;
+    fontFamily: Schema.Attribute.Component<'app.font-families', false>;
     leadProfile: Schema.Attribute.Component<'shared.lead-profile', false>;
-    lineGraph: Schema.Attribute.Component<'shared.line-graph', false>;
     link: Schema.Attribute.Component<'app.link', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -397,13 +402,21 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
       'api::app-theme.app-theme'
     > &
       Schema.Attribute.Private;
+    login: Schema.Attribute.Component<'app.login', false>;
     pagination: Schema.Attribute.Component<'shared.pagination', false>;
-    pieChart: Schema.Attribute.Component<'shared.pie-chart', false>;
     publishedAt: Schema.Attribute.DateTime;
     sidebar: Schema.Attribute.Component<'shared.sidebar', false>;
-    stackedGraph: Schema.Attribute.Component<'shared.stacked-graph', false>;
+    summaryCards: Schema.Attribute.Component<'app.summary-cards', false>;
     table: Schema.Attribute.Component<'shared.table', false>;
+    tabs: Schema.Attribute.Component<'app.tab', false>;
     tenentId: Schema.Attribute.String;
+    textColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
     tooltip: Schema.Attribute.Component<'app.tooltip', false>;
     topicEngagementLevel: Schema.Attribute.Component<
       'app.engagement-level',
@@ -465,9 +478,6 @@ export interface ApiLoginLogin extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    dummy_test: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'test'>;
     features: Schema.Attribute.Component<'shared.features', false>;
     footer: Schema.Attribute.Component<'shared.footer', false>;
     headerText: Schema.Attribute.RichText;
@@ -943,7 +953,6 @@ export interface PluginUsersPermissionsUser
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;

@@ -1,25 +1,38 @@
 {
   "collectionName": "components_shared_sidebars",
   "info": {
-    "displayName": "Sidebar"
+    "displayName": "Sidebar",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "background": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker"
+      "customField": "plugin::color-picker.color-picker",
+      "options": {
+        "default": "#000000"
+      }
     },
-    "text": {
+    "color": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker"
+      "customField": "plugin::color-picker.color-picker",
+      "options": {
+        "default": "#FFFFFF"
+      }
     },
-    "selectedText": {
+    "selected": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker"
+      "customField": "plugin::color-picker.color-picker",
+      "options": {
+        "default": "#FFFFFF"
+      }
     },
     "selectedBackground": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker"
+      "customField": "plugin::color-picker.color-picker",
+      "options": {
+        "default": "#000000"
+      }
     }
   }
 }

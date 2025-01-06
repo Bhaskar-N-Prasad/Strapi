@@ -1,32 +1,31 @@
 {
-  "collectionName": "components_shared_variant6s",
+  "collectionName": "components_app_tabs",
   "info": {
-    "displayName": "variant6",
+    "displayName": "tab",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "background": {
+    "color": {
       "type": "customField",
       "options": {
         "default": "#000000"
       },
       "customField": "plugin::color-picker.color-picker"
     },
-    "text": {
+    "hover": {
       "type": "customField",
       "options": {
-        "default": "#FFFFFF"
+        "default": "rgba(176 211 245 / 22%)"
       },
       "customField": "plugin::color-picker.color-picker"
     },
-    "border": {
-      "type": "string"
-    },
-    "hover": {
-      "type": "component",
-      "repeatable": false,
-      "component": "button-variant.hover5"
+    "borderBottom": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
     }
   }
 }

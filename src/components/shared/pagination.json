@@ -1,17 +1,24 @@
 {
   "collectionName": "components_shared_paginations",
   "info": {
-    "displayName": "pagination"
+    "displayName": "pagination",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "background": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker"
+      "customField": "plugin::color-picker.color-picker",
+      "options": {
+        "default": "#000000"
+      }
     },
     "color": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker"
+      "customField": "plugin::color-picker.color-picker",
+      "options": {
+        "default": "#FFFFFF"
+      }
     }
   }
 }

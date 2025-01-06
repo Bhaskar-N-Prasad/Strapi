@@ -1,22 +1,21 @@
 {
-  "collectionName": "components_tooltip_variants",
+  "collectionName": "components_app_summary_cards",
   "info": {
-    "displayName": "variant",
-    "description": ""
+    "displayName": "summaryCards"
   },
   "options": {},
   "attributes": {
-    "color": {
-      "type": "customField",
-      "options": {
-        "default": "#000000"
-      },
-      "customField": "plugin::color-picker.color-picker"
-    },
     "background": {
       "type": "customField",
       "options": {
-        "default": "#000000"
+        "default": ""
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "hoverBackground": {
+      "type": "customField",
+      "options": {
+        "default": ""
       },
       "customField": "plugin::color-picker.color-picker"
     }

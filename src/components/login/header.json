@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_tooltip_variants",
+  "collectionName": "components_login_headers",
   "info": {
-    "displayName": "variant",
-    "description": ""
+    "displayName": "header"
   },
   "options": {},
   "attributes": {

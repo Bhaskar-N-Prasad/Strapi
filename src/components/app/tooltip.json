@@ -1,14 +1,29 @@
 {
   "collectionName": "components_app_tooltips",
   "info": {
-    "displayName": "tooltip"
+    "displayName": "tooltip",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "variant": {
-      "displayName": "variant",
+    "black": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
+      "component": "tooltip.variant"
+    },
+    "dark": {
+      "type": "component",
+      "repeatable": false,
+      "component": "tooltip.variant"
+    },
+    "lightBlue": {
+      "type": "component",
+      "repeatable": false,
+      "component": "tooltip.variant"
+    },
+    "light": {
+      "type": "component",
+      "repeatable": false,
       "component": "tooltip.variant"
     }
   }

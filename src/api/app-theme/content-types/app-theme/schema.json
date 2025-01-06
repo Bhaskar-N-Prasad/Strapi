@@ -12,30 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "lineGraph": {
-      "displayName": "lineGraph",
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.line-graph"
-    },
-    "stackedGraph": {
-      "displayName": "stackedGraph",
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.stacked-graph"
-    },
-    "pieChart": {
-      "displayName": "pieChart",
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.pie-chart"
-    },
-    "geoMap": {
-      "displayName": "geoMap",
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.geo-map"
-    },
     "tenentId": {
       "type": "string",
       "regex": "^((?!<[^>]+>).)*$"
@@ -93,10 +69,43 @@
       "repeatable": false,
       "component": "app.tooltip"
     },
-    "jobTitileBg": {
+    "summaryCards": {
+      "displayName": "summaryCards",
       "type": "component",
-      "repeatable": true,
-      "component": "shared.colors"
+      "repeatable": false,
+      "component": "app.summary-cards"
+    },
+    "textColor": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "appBackground": {
+      "type": "customField",
+      "options": {
+        "default": "#000000"
+      },
+      "customField": "plugin::color-picker.color-picker"
+    },
+    "login": {
+      "displayName": "login",
+      "type": "component",
+      "repeatable": false,
+      "component": "app.login"
+    },
+    "tabs": {
+      "displayName": "tab",
+      "type": "component",
+      "repeatable": false,
+      "component": "app.tab"
+    },
+    "fontFamily": {
+      "displayName": "fontFamilies",
+      "type": "component",
+      "repeatable": false,
+      "component": "app.font-families"
     }
   }
 }

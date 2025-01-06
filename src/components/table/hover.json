@@ -1,13 +1,17 @@
 {
   "collectionName": "components_table_hovers",
   "info": {
-    "displayName": "hover"
+    "displayName": "hover",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "background": {
       "type": "customField",
-      "customField": "plugin::color-picker.color-picker"
+      "customField": "plugin::color-picker.color-picker",
+      "options": {
+        "default": "#000000"
+      }
     }
   }
 }
