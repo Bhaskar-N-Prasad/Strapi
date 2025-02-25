@@ -8,6 +8,10 @@ export default () => ({
         enabled: true,
         resolve: './src/plugins/checkbox'
       },
+      'html-previewer': {
+        enabled: true,
+        resolve: './src/plugins/html-previewer'
+      },
       // ...
 });
 

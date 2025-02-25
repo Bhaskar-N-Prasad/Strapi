@@ -4,9 +4,9 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
-    "install-strapi": "cd src/plugins/color-picker && yarn install && cd ../checkbox && yarn install && cd ../../../ && yarn install",
-    "dev": "cd src/plugins/color-picker && yarn build && cd ../checkbox && yarn build && cd ../../../ && yarn build && yarn develop",
-    "build": "rm -rf dist &&  cd src/plugins/color-picker && yarn install && cd ../checkbox &&   yarn install && cd ../../../ && cd src/plugins/color-picker && yarn build && cd ../checkbox &&   yarn build && cd ../../../ && strapi build",
+    "install-strapi": "cd src/plugins/html-previewer && yarn install && cd ../color-picker && yarn install && cd ../checkbox && yarn install && cd ../../../ && yarn install",
+    "dev": "cd src/plugins/html-previewer && yarn build && cd ../color-picker && yarn build && cd ../checkbox && yarn build && cd ../../../ && yarn build && yarn develop",
+    "build": "rm -rf dist && cd src/plugins/html-previewer && yarn build && cd ../color-picker && yarn install && cd ../checkbox &&   yarn install && cd ../../../ && cd src/plugins/color-picker && yarn build && cd ../checkbox &&   yarn build && cd ../../../ && strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
     "seed:example": "node ./scripts/seed.js",

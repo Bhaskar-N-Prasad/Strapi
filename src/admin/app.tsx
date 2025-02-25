@@ -1,5 +1,6 @@
 import type { StrapiApp } from '@strapi/strapi/admin';
 import { unstable_useContentManagerContext as useCMEditViewDataManager  } from '@strapi/strapi/admin';
+import { useMemo } from 'react';
 
 const previewContentTypes = ["login"];
 
@@ -9,6 +10,9 @@ const buttonVariants = {
   primary: { ...commonButtonStyles ,background: "#4945ff", cursor: 'pointer'},
   disabled: {...commonButtonStyles, background: "#9391ff"}
 }
+
+
+
 
 const PreviewButton = () => {
   const editView = useCMEditViewDataManager();
@@ -24,8 +28,23 @@ const PreviewButton = () => {
     window.open(prevIewUrl, "__blank__")
   }
 
+  // function openHtmlInNewTab(htmlContent: string) {
+    
+  //   const blob = new Blob([htmlContent], { type: 'text/html' });
+  //   const url = URL.createObjectURL(blob);
+  
+  //  window.open(url, "_blank");
+
+  // }
+
   const handlePreview = ()=>{
-    redirectToThePage(editView.id)
+    // if(editView.contentType?.apiID === "email-template"){
+    //   openHtmlInNewTab(editView.form.values.body);
+    // }
+    // else{
+      redirectToThePage(editView.id)
+
+    // }
   }
 
   if(status === "published"){
@@ -33,45 +52,26 @@ const PreviewButton = () => {
       Go to the Page
     </button>
   }
+
+  const buttonDisbaled = useMemo(()=>{
+    // if(editView.contentType?.apiID === "email-template"){
+    //   return false;
+    // }
+    return editView.form.modified || !Object.keys(editView.form.values).length;
+  }, [editView]);
   
 
   return (  previewContentTypes.includes((editView.contentType?.apiID as string).toLowerCase()) && status !== 'published' ? 
-    <button  onClick={handlePreview} disabled={editView.form.modified}  style={!editView.form.modified ? buttonVariants.primary : buttonVariants.disabled}>
+    <button  onClick={handlePreview} disabled={buttonDisbaled}  style={!buttonDisbaled ? buttonVariants.primary : buttonVariants.disabled}>
       Preview
     </button> : null
   );
-  };
+};
 
 
 export default {
   config: {
     locales: [
-      // 'ar',
-      // 'fr',
-      // 'cs',
-      // 'de',
-      // 'dk',
-      // 'es',
-      // 'he',
-      // 'id',
-      // 'it',
-      // 'ja',
-      // 'ko',
-      // 'ms',
-      // 'nl',
-      // 'no',
-      // 'pl',
-      // 'pt-BR',
-      // 'pt',
-      // 'ru',
-      // 'sk',
-      // 'sv',
-      // 'th',
-      // 'tr',
-      // 'uk',
-      // 'vi',
-      // 'zh-Hans',
-      // 'zh',
     ],
   },
   bootstrap(app: StrapiApp) {

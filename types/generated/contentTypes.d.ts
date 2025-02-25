@@ -428,6 +428,45 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiEmailTemplateEmailTemplate
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'email_templates';
+  info: {
+    description: '';
+    displayName: 'Email template';
+    pluralName: 'email-templates';
+    singularName: 'email-template';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    body: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::email-template.email-template'
+    > &
+      Schema.Attribute.Private;
+    PreviewHtml: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::html-previewer.html-previewer',
+        {
+          default: '#000000';
+        }
+      >;
+    publishedAt: Schema.Attribute.DateTime;
+    Subject: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
   collectionName: 'features';
   info: {
@@ -1007,6 +1046,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::app-theme.app-theme': ApiAppThemeAppTheme;
+      'api::email-template.email-template': ApiEmailTemplateEmailTemplate;
       'api::feature.feature': ApiFeatureFeature;
       'api::login.login': ApiLoginLogin;
       'plugin::content-releases.release': PluginContentReleasesRelease;
