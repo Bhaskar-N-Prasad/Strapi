@@ -12,19 +12,21 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "applicationName": {
+      "type": "string",
+      "required": true
+    },
+    "subject": {
       "type": "string"
     },
-    "Subject": {
-      "type": "string"
+    "type": {
+      "type": "string",
+      "required": true
     },
     "body": {
-      "type": "richtext"
-    },
-    "PreviewHtml": {
       "type": "customField",
       "options": {
-        "default": "#000000"
+        "default": ""
       },
       "customField": "plugin::html-previewer.html-previewer"
     }

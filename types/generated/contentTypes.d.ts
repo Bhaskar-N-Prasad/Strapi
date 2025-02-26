@@ -441,7 +441,14 @@ export interface ApiEmailTemplateEmailTemplate
     draftAndPublish: true;
   };
   attributes: {
-    body: Schema.Attribute.RichText;
+    applicationName: Schema.Attribute.String & Schema.Attribute.Required;
+    body: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::html-previewer.html-previewer',
+        {
+          default: '';
+        }
+      >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -451,16 +458,9 @@ export interface ApiEmailTemplateEmailTemplate
       'api::email-template.email-template'
     > &
       Schema.Attribute.Private;
-    PreviewHtml: Schema.Attribute.String &
-      Schema.Attribute.CustomField<
-        'plugin::html-previewer.html-previewer',
-        {
-          default: '#000000';
-        }
-      >;
     publishedAt: Schema.Attribute.DateTime;
-    Subject: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    subject: Schema.Attribute.String;
+    type: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
