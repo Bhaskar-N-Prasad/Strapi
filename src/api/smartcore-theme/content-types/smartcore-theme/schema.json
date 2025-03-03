@@ -1,11 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "app_themes",
+  "collectionName": "smartcore_themes",
   "info": {
-    "singularName": "app-theme",
-    "pluralName": "app-themes",
-    "displayName": "AppTheme",
-    "description": ""
+    "singularName": "smartcore-theme",
+    "pluralName": "smartcore-themes",
+    "displayName": "Smartcore Theme",
+    "description": "This collection is having fields related to smartcore app"
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +14,8 @@
   "attributes": {
     "tenentId": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "40t3333i3e2t0ontmgv34o63dh"
     },
     "Button": {
       "displayName": "Button",
@@ -52,13 +53,8 @@
       "repeatable": false,
       "component": "app.link"
     },
-    "engagementLevel": {
-      "displayName": "engagementLevel",
-      "type": "component",
-      "repeatable": false,
-      "component": "app.engagement-level"
-    },
-    "topicEngagementLevel": {
+    "ingredientsLevel": {
+      "displayName": "ingredientsLevel",
       "type": "component",
       "repeatable": false,
       "component": "app.engagement-level"

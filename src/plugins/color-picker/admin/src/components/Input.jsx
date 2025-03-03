@@ -58,6 +58,8 @@ const rgbToHex = (rgb) => {
     .join('')}`;
 };
 
+const defaultValue = "#FFFFFF";
+
 
 const Input = ({
   name,
@@ -71,9 +73,15 @@ const Input = ({
   ...props
 }) => {
   const { formatMessage } = useIntl();
-  const [color, setColor] = useState(value == undefined ? (attribute?.options?.default || "#ffffff") : value);
+  const [color, setColor] = useState(value || defaultValue);
   const [err, setError] = useState("");
-  const [pickerColor, setPickerColor] = useState("#ffffff");
+  const [pickerColor, setPickerColor] = useState(defaultValue);
+
+  useEffect(()=>{
+    if(value == undefined){
+      onChange({ target: { name, value: defaultValue, type: attribute.type } });
+    }
+  }, []);
 
   
 
@@ -114,8 +122,8 @@ const Input = ({
 
   return (
     <div style={{ width: "100%" }}>
-      <label htmlFor={name} style={{fontWeight: 600}}>
-        {label}
+      <label htmlFor={name} style={{fontWeight: 600, display: "flex"}}>
+        {label} {required && <pre style={{color: "red"}}>*</pre>}
       </label>
       <div
         style={{

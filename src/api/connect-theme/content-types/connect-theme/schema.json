@@ -1,11 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "app_themes",
+  "collectionName": "connect_themes",
   "info": {
-    "singularName": "app-theme",
-    "pluralName": "app-themes",
-    "displayName": "AppTheme",
-    "description": ""
+    "singularName": "connect-theme",
+    "pluralName": "connect-themes",
+    "displayName": "Connect Theme",
+    "description": "This collection is having fields related to connect app"
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +14,8 @@
   "attributes": {
     "tenentId": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "4fmpumj6g3dkia15n8psq4dao4"
     },
     "Button": {
       "displayName": "Button",
@@ -54,11 +55,6 @@
     },
     "engagementLevel": {
       "displayName": "engagementLevel",
-      "type": "component",
-      "repeatable": false,
-      "component": "app.engagement-level"
-    },
-    "topicEngagementLevel": {
       "type": "component",
       "repeatable": false,
       "component": "app.engagement-level"

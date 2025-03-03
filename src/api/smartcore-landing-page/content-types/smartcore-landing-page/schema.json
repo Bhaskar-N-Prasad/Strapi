@@ -1,22 +1,28 @@
 {
   "kind": "collectionType",
-  "collectionName": "logins",
+  "collectionName": "smartcore_landing_pages",
   "info": {
-    "singularName": "login",
-    "pluralName": "logins",
-    "displayName": "Login",
-    "description": ""
+    "singularName": "smartcore-landing-page",
+    "pluralName": "smartcore-landing-pages",
+    "displayName": "Smartcore Landing Page",
+    "description": "This collection is having fields related to smartcore app"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
-     "tenentId": {
+    "tenentId": {
       "type": "string",
       "required": true,
       "unique": true,
-      "default": "4fmpumj6g3dkia15n8psq4dao4"
+      "default": "40t3333i3e2t0ontmgv34o63dh"
+    },
+    "appName": {
+      "type": "string",
+      "regex": "^((?!<[^>]+>).)*$"
+    },
+    "headerText": {
+      "type": "richtext"
     },
     "logoText": {
       "type": "string",
@@ -52,23 +58,6 @@
       "repeatable": false,
       "component": "shared.features"
     },
-    "footer": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.footer"
-    },
-    "theme": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.theme"
-    },
-    "appName": {
-      "type": "string",
-      "regex": "^((?!<[^>]+>).)*$"
-    },
-    "headerText": {
-      "type": "richtext"
-    },
     "terms_and_conditions": {
       "type": "media",
       "multiple": false,
@@ -83,6 +72,11 @@
     "appUrl": {
       "type": "string",
       "regex": "^((?!<[^>]+>).)*$"
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer"
     }
   }
 }

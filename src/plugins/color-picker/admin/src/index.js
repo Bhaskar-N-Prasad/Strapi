@@ -3,6 +3,8 @@ import { PLUGIN_ID } from './pluginId';
 import { Initializer } from './components/Initializer';
 import { PluginIcon } from './components/PluginIcon';
 
+const getTrad = (id) => `${PLUGIN_ID}.${id}`;
+
 export default {
   register(app) {
     // app.addMenuLink({
@@ -42,31 +44,37 @@ export default {
       components: {
         Input: async () => import(/* webpackChunkName: "input-component" */ './components/Input'),
       },
+
       options: {
         /*
          Declare settings to be added to the "Advanced settings" section
          of the field in the Content-Type Builder
        */
-        base: [
+         advanced: [
+         
           {
             sectionTitle: {
-              id: `${PLUGIN_ID}.color.section.format`,
-              defaultMessage: ' ', // Be more specific here
+              id: 'global.settings',
+              defaultMessage: 'Settings',
             },
             items: [
               {
+                name: 'required',
+                type: 'checkbox',
                 intlLabel: {
-                  id: `${PLUGIN_ID}.color.format.label`,
-                  defaultMessage: 'Default Value',
+                  id: getTrad('color-picker.options.advanced.requiredField'),
+                  defaultMessage: 'Required field',
                 },
-                name: 'options.default',
-                type: 'string', // The type of the default value is a string (color)
-                defaultValue: '#000000', // Default to an empty string or null, or a color like "#000000"
+                description: {
+                  id: getTrad('color-picker.options.advanced.requiredField.description'),
+                  defaultMessage: "You won't be able to create an entry if this field is empty",
+                },
               },
             ],
           },
         ],
       },
+
 
       attributes: { type: String, customField: String },
     });

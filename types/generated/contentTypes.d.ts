@@ -409,7 +409,7 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
     summaryCards: Schema.Attribute.Component<'app.summary-cards', false>;
     table: Schema.Attribute.Component<'shared.table', false>;
     tabs: Schema.Attribute.Component<'app.tab', false>;
-    tenentId: Schema.Attribute.String;
+    tenentId: Schema.Attribute.String & Schema.Attribute.Required;
     textColor: Schema.Attribute.String &
       Schema.Attribute.CustomField<
         'plugin::color-picker.color-picker',
@@ -428,12 +428,223 @@ export interface ApiAppThemeAppTheme extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAviationLandingPageAviationLandingPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'aviation_landing_pages';
+  info: {
+    description: 'This collection is having fields related to aviation app';
+    displayName: 'Aviation Landing Page';
+    pluralName: 'aviation-landing-pages';
+    singularName: 'aviation-landing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    appLogo: Schema.Attribute.Media<'images'>;
+    appName: Schema.Attribute.String;
+    appUrl: Schema.Attribute.String;
+    appVideo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    benefit: Schema.Attribute.Component<'shared.benefits', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    features: Schema.Attribute.Component<'shared.features', false>;
+    footer: Schema.Attribute.Component<'shared.footer', false>;
+    headerText: Schema.Attribute.RichText;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::aviation-landing-page.aviation-landing-page'
+    > &
+      Schema.Attribute.Private;
+    logoText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Richer Leads. Actionable Insights.'>;
+    publishedAt: Schema.Attribute.DateTime;
+    tenentId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'5bog6b949risidt9lf7m5ovvun'>;
+    terms_and_conditions: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAviationThemeAviationTheme
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'aviation_themes';
+  info: {
+    description: 'This collection is having fields related to aviation app';
+    displayName: 'Aviation Theme';
+    pluralName: 'aviation-themes';
+    singularName: 'aviation-theme';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    appBackground: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    Button: Schema.Attribute.Component<'shared.button', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    fontFamily: Schema.Attribute.Component<'app.font-families', false>;
+    leadProfile: Schema.Attribute.Component<'shared.lead-profile', false>;
+    link: Schema.Attribute.Component<'app.link', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::aviation-theme.aviation-theme'
+    > &
+      Schema.Attribute.Private;
+    login: Schema.Attribute.Component<'app.login', false>;
+    pagination: Schema.Attribute.Component<'shared.pagination', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    sidebar: Schema.Attribute.Component<'shared.sidebar', false>;
+    summaryCards: Schema.Attribute.Component<'app.summary-cards', false>;
+    table: Schema.Attribute.Component<'shared.table', false>;
+    tabs: Schema.Attribute.Component<'app.tab', false>;
+    tenentId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'5bog6b949risidt9lf7m5ovvun'>;
+    textColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    tooltip: Schema.Attribute.Component<'app.tooltip', false>;
+    topicEngagementLevel: Schema.Attribute.Component<
+      'app.engagement-level',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiConnectLandingPageConnectLandingPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'connect_landing_pages';
+  info: {
+    description: 'This collection is having fields related to connect app';
+    displayName: 'Connect Landing Page';
+    pluralName: 'connect-landing-pages';
+    singularName: 'connect-landing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    appLogo: Schema.Attribute.Media<'images'>;
+    appName: Schema.Attribute.String;
+    appUrl: Schema.Attribute.String;
+    appVideo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    benefit: Schema.Attribute.Component<'shared.benefits', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    features: Schema.Attribute.Component<'shared.features', false>;
+    footer: Schema.Attribute.Component<'shared.footer', false>;
+    headerText: Schema.Attribute.RichText;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::connect-landing-page.connect-landing-page'
+    > &
+      Schema.Attribute.Private;
+    logoText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Richer Leads. Actionable Insights.'>;
+    publishedAt: Schema.Attribute.DateTime;
+    tenentId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'4fmpumj6g3dkia15n8psq4dao4'>;
+    terms_and_conditions: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiConnectThemeConnectTheme
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'connect_themes';
+  info: {
+    description: 'This collection is having fields related to connect app';
+    displayName: 'Connect Theme';
+    pluralName: 'connect-themes';
+    singularName: 'connect-theme';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    appBackground: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    Button: Schema.Attribute.Component<'shared.button', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    engagementLevel: Schema.Attribute.Component<'app.engagement-level', false>;
+    fontFamily: Schema.Attribute.Component<'app.font-families', false>;
+    leadProfile: Schema.Attribute.Component<'shared.lead-profile', false>;
+    link: Schema.Attribute.Component<'app.link', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::connect-theme.connect-theme'
+    > &
+      Schema.Attribute.Private;
+    login: Schema.Attribute.Component<'app.login', false>;
+    pagination: Schema.Attribute.Component<'shared.pagination', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    sidebar: Schema.Attribute.Component<'shared.sidebar', false>;
+    summaryCards: Schema.Attribute.Component<'app.summary-cards', false>;
+    table: Schema.Attribute.Component<'shared.table', false>;
+    tabs: Schema.Attribute.Component<'app.tab', false>;
+    tenentId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'4fmpumj6g3dkia15n8psq4dao4'>;
+    textColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    tooltip: Schema.Attribute.Component<'app.tooltip', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEmailTemplateEmailTemplate
   extends Struct.CollectionTypeSchema {
   collectionName: 'email_templates';
   info: {
     description: '';
-    displayName: 'Email template';
+    displayName: 'Connect Email template';
     pluralName: 'email-templates';
     singularName: 'email-template';
   };
@@ -461,36 +672,6 @@ export interface ApiEmailTemplateEmailTemplate
     publishedAt: Schema.Attribute.DateTime;
     subject: Schema.Attribute.String;
     type: Schema.Attribute.String & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
-  collectionName: 'features';
-  info: {
-    description: '';
-    displayName: 'Feature';
-    pluralName: 'features';
-    singularName: 'feature';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::feature.feature'
-    > &
-      Schema.Attribute.Private;
-    pages: Schema.Attribute.Component<'features.feature', true>;
-    publishedAt: Schema.Attribute.DateTime;
-    tenentId: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -526,11 +707,118 @@ export interface ApiLoginLogin extends Struct.CollectionTypeSchema {
     logoText: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Richer Leads. Actionable Insights.'>;
     publishedAt: Schema.Attribute.DateTime;
-    tenentId: Schema.Attribute.String;
+    tenentId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'4fmpumj6g3dkia15n8psq4dao4'>;
     terms_and_conditions: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
     theme: Schema.Attribute.Component<'shared.theme', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSmartcoreLandingPageSmartcoreLandingPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'smartcore_landing_pages';
+  info: {
+    description: 'This collection is having fields related to smartcore app';
+    displayName: 'Smartcore Landing Page';
+    pluralName: 'smartcore-landing-pages';
+    singularName: 'smartcore-landing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    appLogo: Schema.Attribute.Media<'images'>;
+    appName: Schema.Attribute.String;
+    appUrl: Schema.Attribute.String;
+    appVideo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    benefit: Schema.Attribute.Component<'shared.benefits', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    features: Schema.Attribute.Component<'shared.features', false>;
+    footer: Schema.Attribute.Component<'shared.footer', false>;
+    headerText: Schema.Attribute.RichText;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::smartcore-landing-page.smartcore-landing-page'
+    > &
+      Schema.Attribute.Private;
+    logoText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Richer Leads. Actionable Insights.'>;
+    publishedAt: Schema.Attribute.DateTime;
+    tenentId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'40t3333i3e2t0ontmgv34o63dh'>;
+    terms_and_conditions: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSmartcoreThemeSmartcoreTheme
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'smartcore_themes';
+  info: {
+    description: 'This collection is having fields related to smartcore app';
+    displayName: 'Smartcore Theme';
+    pluralName: 'smartcore-themes';
+    singularName: 'smartcore-theme';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    appBackground: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    Button: Schema.Attribute.Component<'shared.button', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    fontFamily: Schema.Attribute.Component<'app.font-families', false>;
+    ingredientsLevel: Schema.Attribute.Component<'app.engagement-level', false>;
+    leadProfile: Schema.Attribute.Component<'shared.lead-profile', false>;
+    link: Schema.Attribute.Component<'app.link', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::smartcore-theme.smartcore-theme'
+    > &
+      Schema.Attribute.Private;
+    login: Schema.Attribute.Component<'app.login', false>;
+    pagination: Schema.Attribute.Component<'shared.pagination', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    sidebar: Schema.Attribute.Component<'shared.sidebar', false>;
+    summaryCards: Schema.Attribute.Component<'app.summary-cards', false>;
+    table: Schema.Attribute.Component<'shared.table', false>;
+    tabs: Schema.Attribute.Component<'app.tab', false>;
+    tenentId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'40t3333i3e2t0ontmgv34o63dh'>;
+    textColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::color-picker.color-picker',
+        {
+          default: '#000000';
+        }
+      >;
+    tooltip: Schema.Attribute.Component<'app.tooltip', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1046,9 +1334,14 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::app-theme.app-theme': ApiAppThemeAppTheme;
+      'api::aviation-landing-page.aviation-landing-page': ApiAviationLandingPageAviationLandingPage;
+      'api::aviation-theme.aviation-theme': ApiAviationThemeAviationTheme;
+      'api::connect-landing-page.connect-landing-page': ApiConnectLandingPageConnectLandingPage;
+      'api::connect-theme.connect-theme': ApiConnectThemeConnectTheme;
       'api::email-template.email-template': ApiEmailTemplateEmailTemplate;
-      'api::feature.feature': ApiFeatureFeature;
       'api::login.login': ApiLoginLogin;
+      'api::smartcore-landing-page.smartcore-landing-page': ApiSmartcoreLandingPageSmartcoreLandingPage;
+      'api::smartcore-theme.smartcore-theme': ApiSmartcoreThemeSmartcoreTheme;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
